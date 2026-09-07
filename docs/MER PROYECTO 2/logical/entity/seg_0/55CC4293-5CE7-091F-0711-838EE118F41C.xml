@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="55CC4293-5CE7-091F-0711-838EE118F41C" name="USER">
+<createdBy>David</createdBy>
+<createdTime>2026-08-25 20:32:53 UTC</createdTime>
+<ownerDesignName>MER PROYECTO 2</ownerDesignName>
+<engineerTo>
+<item key="4C5CB95C-C99C-5C96-D118-FD77F586C7C8" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="DE4A8B6E-D03F-26DA-4B1C-3377FC9B4FCA">
+<createdBy>David</createdBy>
+<createdTime>2026-08-25 20:32:58 UTC</createdTime>
+<ownerDesignName>MER PROYECTO 2</ownerDesignName>
+<engineerTo>
+<item key="4C5CB95C-C99C-5C96-D118-FD77F586C7C8" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="D31CD001-3A8D-C7F3-230C-F3F2C9A00B76">
+<createdBy>David</createdBy>
+<createdTime>2026-08-25 20:33:02 UTC</createdTime>
+<ownerDesignName>MER PROYECTO 2</ownerDesignName>
+<engineerTo>
+<item key="4C5CB95C-C99C-5C96-D118-FD77F586C7C8" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="institutional_email" id="F4CD0C2D-D9B3-6D0B-7279-216548D63622">
+<createdBy>David</createdBy>
+<createdTime>2026-08-25 20:33:08 UTC</createdTime>
+<ownerDesignName>MER PROYECTO 2</ownerDesignName>
+<engineerTo>
+<item key="4C5CB95C-C99C-5C96-D118-FD77F586C7C8" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Photo" id="21163977-F9DA-4BE6-EA63-9FF394C79C51">
+<createdBy>David</createdBy>
+<createdTime>2026-08-25 20:41:00 UTC</createdTime>
+<ownerDesignName>MER PROYECTO 2</ownerDesignName>
+<engineerTo>
+<item key="4C5CB95C-C99C-5C96-D118-FD77F586C7C8" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="password" id="741100D6-A003-8C18-DC21-63D0D4373C52">
+<createdBy>David</createdBy>
+<createdTime>2026-08-25 20:54:54 UTC</createdTime>
+<ownerDesignName>MER PROYECTO 2</ownerDesignName>
+<engineerTo>
+<item key="4C5CB95C-C99C-5C96-D118-FD77F586C7C8" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="8C866C33-A12A-7EE5-606E-7DA7407573AA" name="USER PK">
+<createdBy>David</createdBy>
+<createdTime>2026-08-25 20:33:00 UTC</createdTime>
+<ownerDesignName>MER PROYECTO 2</ownerDesignName>
+<engineerTo>
+<item key="4C5CB95C-C99C-5C96-D118-FD77F586C7C8" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>DE4A8B6E-D03F-26DA-4B1C-3377FC9B4FCA</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

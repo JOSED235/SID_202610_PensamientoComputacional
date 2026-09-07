@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6AFAF813-4B79-D92C-D948-77AAC1CACA74" name="EXERCISE">
+<createdBy>David</createdBy>
+<createdTime>2026-08-25 21:31:25 UTC</createdTime>
+<ownerDesignName>MER PROYECTO 2</ownerDesignName>
+<engineerTo>
+<item key="4C5CB95C-C99C-5C96-D118-FD77F586C7C8" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="statement" id="9774A3C7-863B-1205-B63F-5744C938EAF3">
+<createdBy>David</createdBy>
+<createdTime>2026-08-25 21:32:48 UTC</createdTime>
+<ownerDesignName>MER PROYECTO 2</ownerDesignName>
+<engineerTo>
+<item key="4C5CB95C-C99C-5C96-D118-FD77F586C7C8" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dificulty" id="E76E6093-9D15-CC8B-382E-68FBD5721C46">
+<createdBy>David</createdBy>
+<createdTime>2026-08-25 21:33:19 UTC</createdTime>
+<ownerDesignName>MER PROYECTO 2</ownerDesignName>
+<engineerTo>
+<item key="4C5CB95C-C99C-5C96-D118-FD77F586C7C8" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id" id="69C9994C-1202-FBDD-9E59-7854678F5DB0">
+<createdBy>David</createdBy>
+<createdTime>2026-08-25 21:34:44 UTC</createdTime>
+<generatorID>8F087EFB-93CB-26F9-4049-1E681C55D33B</generatorID>
+<ownerDesignName>MER PROYECTO 2</ownerDesignName>
+<engineerTo>
+<item key="4C5CB95C-C99C-5C96-D118-FD77F586C7C8" value="true"/>
+</engineerTo>
+<referedAttribute>AE5E7640-19B9-64BC-C9A3-CF55D8C6AED8</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="student_level" id="11894CE8-279F-AA1F-9F0A-F5D52F902B1F">
+<createdBy>David</createdBy>
+<createdTime>2026-08-31 04:44:18 UTC</createdTime>
+<ownerDesignName>MER PROYECTO 2</ownerDesignName>
+<engineerTo>
+<item key="4C5CB95C-C99C-5C96-D118-FD77F586C7C8" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="date" id="64FFB50C-08B2-16A4-CD20-48C8C7EA4AFB">
+<createdBy>David</createdBy>
+<createdTime>2026-08-31 05:02:32 UTC</createdTime>
+<generatorID>9F5E9AD1-21A2-3607-6F1B-C47FCAF62AD1</generatorID>
+<ownerDesignName>MER PROYECTO 2</ownerDesignName>
+<engineerTo>
+<item key="4C5CB95C-C99C-5C96-D118-FD77F586C7C8" value="true"/>
+</engineerTo>
+<referedAttribute>90309087-2A3D-FC32-B116-013891629DDA</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2F354636-9620-BD2A-B98B-3CFD72DF5D8C" name="ACTIVITY">
+<createdBy>David</createdBy>
+<createdTime>2026-08-25 21:30:18 UTC</createdTime>
+<ownerDesignName>MER PROYECTO 2</ownerDesignName>
+<engineerTo>
+<item key="4C5CB95C-C99C-5C96-D118-FD77F586C7C8" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="AE5E7640-19B9-64BC-C9A3-CF55D8C6AED8">
+<createdBy>David</createdBy>
+<createdTime>2026-08-25 21:30:39 UTC</createdTime>
+<ownerDesignName>MER PROYECTO 2</ownerDesignName>
+<engineerTo>
+<item key="4C5CB95C-C99C-5C96-D118-FD77F586C7C8" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="EA23D01D-DA9B-2D32-FF38-7F8FA0DC399F">
+<createdBy>David</createdBy>
+<createdTime>2026-08-25 21:30:35 UTC</createdTime>
+<ownerDesignName>MER PROYECTO 2</ownerDesignName>
+<engineerTo>
+<item key="4C5CB95C-C99C-5C96-D118-FD77F586C7C8" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="2F9DDD2C-AB43-255C-4827-99CF3FD9CDA3">
+<createdBy>David</createdBy>
+<createdTime>2026-08-25 21:37:21 UTC</createdTime>
+<generatorID>4EF0D3C0-AF3D-2ED3-B6D8-6577A4937183</generatorID>
+<ownerDesignName>MER PROYECTO 2</ownerDesignName>
+<engineerTo>
+<item key="4C5CB95C-C99C-5C96-D118-FD77F586C7C8" value="true"/>
+</engineerTo>
+<referedAttribute>DE4A8B6E-D03F-26DA-4B1C-3377FC9B4FCA</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="activity_date" id="08D7C7CB-87C1-FEC6-3A3B-13E3561E1FB5">
+<createdBy>David</createdBy>
+<createdTime>2026-09-01 21:47:52 UTC</createdTime>
+<ownerDesignName>MER PROYECTO 2</ownerDesignName>
+<engineerTo>
+<item key="4C5CB95C-C99C-5C96-D118-FD77F586C7C8" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9BF10003-8E1A-982E-12D3-859FD1F6E8AD" name="ACTIVITY PK">
+<createdBy>David</createdBy>
+<createdTime>2026-08-25 21:30:41 UTC</createdTime>
+<ownerDesignName>MER PROYECTO 2</ownerDesignName>
+<engineerTo>
+<item key="4C5CB95C-C99C-5C96-D118-FD77F586C7C8" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>AE5E7640-19B9-64BC-C9A3-CF55D8C6AED8</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
