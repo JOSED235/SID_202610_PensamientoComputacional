@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="PensamientoComputacionalMR" id="361BDBA6-3BEF-2DAE-2B91-52B7E3765027" version="3.5">
+<createdBy>SANTIAGO</createdBy>
+<createdTime>2026-10-06 23:15:43 UTC</createdTime>
+<ownerDesignName>PensamientoComputacionalMR</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>361BDBA6-3BEF-2DAE-2B91-52B7E3765027</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="659748FB-83EB-A57B-1C6C-AB1655574B54">
+<designStoragePath>D:\Modelo_Relacional_Normalizado_3FN</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

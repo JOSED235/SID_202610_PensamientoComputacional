@@ -1,10 +1,13 @@
--- 02_dml.sql: datos de prueba (DML)
+-- =====================================================================
+-- 02_dml.sql  |  Datos de prueba (DML)
 -- Ejecutar DESPUES de 01_ddl.sql. Los ids son explicitos (< 1000) para que
 -- las llaves foraneas sean legibles; las secuencias IDENTITY inician en 1000.
 -- Volumen: 1 admin, 4 profesores, 24 estudiantes, 3 semestres (activo: 2026-2),
 -- 6 grupos, 15 ejercicios, 11 actividades y los puntajes asociados.
 -- Las contrasenas son hashes ficticios de demostracion; no son credenciales reales.
 -- Los niveles de los estudiantes ya son consistentes con sus puntos del semestre activo.
+-- =====================================================================
+
 -- Dominios
 INSERT INTO user_type (id, name) VALUES (1, 'ESTUDIANTE');
 INSERT INTO user_type (id, name) VALUES (2, 'PROFESOR');
@@ -26,14 +29,17 @@ INSERT INTO difficulty_scale (id, label) VALUES (7, 'Avanzada');
 INSERT INTO difficulty_scale (id, label) VALUES (8, 'Muy avanzada');
 INSERT INTO difficulty_scale (id, label) VALUES (9, 'Experta');
 INSERT INTO difficulty_scale (id, label) VALUES (10, 'Reto maximo');
+
 -- Semestres (solo 2026-2 esta activo)
 INSERT INTO semester (id, name, start_date, end_date, active) VALUES (1, '2025-2', DATE '2025-08-04', DATE '2025-12-06', 0);
 INSERT INTO semester (id, name, start_date, end_date, active) VALUES (2, '2026-1', DATE '2026-01-19', DATE '2026-06-06', 0);
 INSERT INTO semester (id, name, start_date, end_date, active) VALUES (3, '2026-2', DATE '2026-08-03', DATE '2026-12-05', 1);
+
 -- Categorias de desempeno
 INSERT INTO level_rank (id, name, min_points, max_points) VALUES (1, 'Principiante', 0, 99);
 INSERT INTO level_rank (id, name, min_points, max_points) VALUES (2, 'Killer', 100, 299);
 INSERT INTO level_rank (id, name, min_points, max_points) VALUES (3, 'Pro', 300, NULL);
+
 -- Usuarios (contrasenas: hashes ficticios)
 INSERT INTO app_user (id, name, institutional_email, photo_url, password_hash, status_id, user_type_id) VALUES (1, 'Administrador Plataforma', 'admin.plataforma@icesi.edu.co', NULL, '$2b$12$8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6', 1, 3);
 INSERT INTO app_user (id, name, institutional_email, photo_url, password_hash, status_id, user_type_id) VALUES (11, 'Laura Mejia Cardenas', 'laura.mejia@icesi.edu.co', '/media/perfiles/11.jpg', '$2b$12$4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c0', 1, 2);
@@ -64,6 +70,7 @@ INSERT INTO app_user (id, name, institutional_email, photo_url, password_hash, s
 INSERT INTO app_user (id, name, institutional_email, photo_url, password_hash, status_id, user_type_id) VALUES (122, 'Esteban Palacios Rey', 'esteban.palacios@u.icesi.edu.co', '/media/perfiles/122.jpg', '$2b$12$1be00341082e25c4e251ca6713e767f7131a2823b0052caf9c9b0', 1, 1);
 INSERT INTO app_user (id, name, institutional_email, photo_url, password_hash, status_id, user_type_id) VALUES (123, 'Natalia Sanchez Ibarra', 'natalia.sanchez@u.icesi.edu.co', NULL, '$2b$12$a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e8', 1, 1);
 INSERT INTO app_user (id, name, institutional_email, photo_url, password_hash, status_id, user_type_id) VALUES (124, 'Felipe Granados Vega', 'felipe.granados@u.icesi.edu.co', '/media/perfiles/124.jpg', '$2b$12$6affdae3b3c1aa6aa7689e9b6a7b3225a636aa1ac0025f490cca1', 2, 1);
+
 -- Subtipos de usuario
 INSERT INTO administrator (id) VALUES (1);
 INSERT INTO professor (id, employee_code) VALUES (11, 'PROF-0011');
@@ -94,6 +101,7 @@ INSERT INTO student (id, current_level_id) VALUES (121, 1);
 INSERT INTO student (id, current_level_id) VALUES (122, 1);
 INSERT INTO student (id, current_level_id) VALUES (123, 1);
 INSERT INTO student (id, current_level_id) VALUES (124, 1);
+
 -- Grupos (G1 y G3 se repiten en 2026-1 y 2026-2: el nombre es unico solo por semestre)
 INSERT INTO course_group (id, name, semester_id, professor_id) VALUES (1, 'G1', 3, 11);
 INSERT INTO course_group (id, name, semester_id, professor_id) VALUES (2, 'G3', 3, 12);
@@ -101,6 +109,7 @@ INSERT INTO course_group (id, name, semester_id, professor_id) VALUES (3, 'G5', 
 INSERT INTO course_group (id, name, semester_id, professor_id) VALUES (4, 'G7', 3, 14);
 INSERT INTO course_group (id, name, semester_id, professor_id) VALUES (5, 'G1', 2, 11);
 INSERT INTO course_group (id, name, semester_id, professor_id) VALUES (6, 'G3', 2, 12);
+
 -- Matriculas
 INSERT INTO enrollment (id, student_id, group_id, registration_date) VALUES (1, 101, 1, TIMESTAMP '2026-08-08 10:47:00');
 INSERT INTO enrollment (id, student_id, group_id, registration_date) VALUES (2, 102, 1, TIMESTAMP '2026-08-03 11:54:00');
@@ -126,6 +135,7 @@ INSERT INTO enrollment (id, student_id, group_id, registration_date) VALUES (21,
 INSERT INTO enrollment (id, student_id, group_id, registration_date) VALUES (22, 122, 5, TIMESTAMP '2026-01-21 09:06:00');
 INSERT INTO enrollment (id, student_id, group_id, registration_date) VALUES (23, 123, 5, TIMESTAMP '2026-01-22 09:09:00');
 INSERT INTO enrollment (id, student_id, group_id, registration_date) VALUES (24, 124, 6, TIMESTAMP '2026-01-23 09:12:00');
+
 -- Ejercicios (el nivel objetivo depende de la dificultad: 0-3 Principiante, 4-6 Killer, 7-10 Pro)
 INSERT INTO exercise (id, statement, difficulty_id, level_id) VALUES (1, 'Escribe un programa que lea dos numeros enteros y muestre su suma.', 1, 1);
 INSERT INTO exercise (id, statement, difficulty_id, level_id) VALUES (2, 'Calcula el area de un circulo a partir del radio ingresado por el usuario.', 2, 1);
@@ -142,6 +152,7 @@ INSERT INTO exercise (id, statement, difficulty_id, level_id) VALUES (12, 'Escri
 INSERT INTO exercise (id, statement, difficulty_id, level_id) VALUES (13, 'Calcula el promedio de una lista de notas.', 3, 1);
 INSERT INTO exercise (id, statement, difficulty_id, level_id) VALUES (14, 'Implementa busqueda binaria sobre una lista ordenada.', 7, 3);
 INSERT INTO exercise (id, statement, difficulty_id, level_id) VALUES (15, 'Ordena una lista de numeros con el algoritmo de burbuja.', 10, 3);
+
 -- Actividades
 INSERT INTO activity (id, name, start_date, end_date, status_id, professor_id, group_id) VALUES (1, 'Variables y tipos de datos', TIMESTAMP '2026-08-12 08:00:00', TIMESTAMP '2026-08-12 10:00:00', 3, 11, 1);
 INSERT INTO activity (id, name, start_date, end_date, status_id, professor_id, group_id) VALUES (2, 'Condicionales', TIMESTAMP '2026-09-02 08:00:00', TIMESTAMP '2026-09-02 10:00:00', 3, 11, 1);
@@ -154,6 +165,7 @@ INSERT INTO activity (id, name, start_date, end_date, status_id, professor_id, g
 INSERT INTO activity (id, name, start_date, end_date, status_id, professor_id, group_id) VALUES (9, 'Funciones', TIMESTAMP '2026-11-20 08:00:00', TIMESTAMP '2026-11-20 10:00:00', 1, 14, 4);
 INSERT INTO activity (id, name, start_date, end_date, status_id, professor_id, group_id) VALUES (10, 'Introduccion a Python', TIMESTAMP '2026-03-10 08:00:00', TIMESTAMP '2026-03-10 10:00:00', 3, 11, 5);
 INSERT INTO activity (id, name, start_date, end_date, status_id, professor_id, group_id) VALUES (11, 'Introduccion a Python', TIMESTAMP '2026-03-12 10:00:00', TIMESTAMP '2026-03-12 12:00:00', 3, 12, 6);
+
 -- Ejercicios por actividad
 INSERT INTO activity_exercise (id, activity_id, exercise_id, order_num) VALUES (1, 1, 1, 1);
 INSERT INTO activity_exercise (id, activity_id, exercise_id, order_num) VALUES (2, 1, 2, 2);
@@ -183,86 +195,88 @@ INSERT INTO activity_exercise (id, activity_id, exercise_id, order_num) VALUES (
 INSERT INTO activity_exercise (id, activity_id, exercise_id, order_num) VALUES (26, 10, 2, 2);
 INSERT INTO activity_exercise (id, activity_id, exercise_id, order_num) VALUES (27, 11, 1, 1);
 INSERT INTO activity_exercise (id, activity_id, exercise_id, order_num) VALUES (28, 11, 2, 2);
+
 -- Puntajes asignados por los profesores
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (1, 18, TIMESTAMP '2026-08-12 08:17:00', 101, 2, 11, 1, 'A01-S101-E02');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (2, 30, TIMESTAMP '2026-08-12 08:22:00', 101, 3, 11, 1, 'A01-S101-E03');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (3, 9, TIMESTAMP '2026-08-12 08:27:00', 102, 1, 11, 1, 'A01-S102-E01');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (4, 24, TIMESTAMP '2026-08-12 08:32:00', 102, 3, 11, 1, 'A01-S102-E03');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (5, 10, TIMESTAMP '2026-08-12 08:37:00', 103, 1, 11, 1, 'A01-S103-E01');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (6, 16, TIMESTAMP '2026-08-12 08:42:00', 103, 2, 11, 1, 'A01-S103-E02');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (7, 8, TIMESTAMP '2026-08-12 08:47:00', 104, 1, 11, 1, 'A01-S104-E01');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (8, 12, TIMESTAMP '2026-08-12 08:52:00', 104, 2, 11, 1, 'A01-S104-E02');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (9, 27, TIMESTAMP '2026-08-12 08:57:00', 104, 3, 11, 1, 'A01-S104-E03');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (10, 20, TIMESTAMP '2026-08-12 09:02:00', 106, 2, 11, 1, 'A01-S106-E02');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (11, 24, TIMESTAMP '2026-08-12 09:07:00', 106, 3, 11, 1, 'A01-S106-E03');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (12, 32, TIMESTAMP '2026-09-02 08:17:00', 101, 4, 11, 1, 'A02-S101-E04');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (13, 30, TIMESTAMP '2026-09-02 08:22:00', 101, 5, 11, 1, 'A02-S101-E05');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (14, 24, TIMESTAMP '2026-09-02 08:27:00', 102, 4, 11, 1, 'A02-S102-E04');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (15, 45, TIMESTAMP '2026-09-02 08:32:00', 102, 5, 11, 1, 'A02-S102-E05');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (16, 60, TIMESTAMP '2026-09-02 08:37:00', 102, 6, 11, 1, 'A02-S102-E06');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (17, 36, TIMESTAMP '2026-09-02 08:42:00', 103, 4, 11, 1, 'A02-S103-E04');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (18, 50, TIMESTAMP '2026-09-02 08:47:00', 103, 5, 11, 1, 'A02-S103-E05');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (19, 48, TIMESTAMP '2026-09-02 08:52:00', 103, 6, 11, 1, 'A02-S103-E06');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (20, 40, TIMESTAMP '2026-09-02 08:57:00', 104, 5, 11, 1, 'A02-S104-E05');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (21, 36, TIMESTAMP '2026-09-02 09:02:00', 104, 6, 11, 1, 'A02-S104-E06');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (22, 24, TIMESTAMP '2026-09-02 09:07:00', 106, 4, 11, 1, 'A02-S106-E04');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (23, 45, TIMESTAMP '2026-09-02 09:12:00', 106, 5, 11, 1, 'A02-S106-E05');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (24, 70, TIMESTAMP '2026-11-13 08:17:00', 101, 7, 11, 1, 'A03-S101-E07');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (25, 64, TIMESTAMP '2026-11-13 08:22:00', 101, 8, 11, 1, 'A03-S101-E08');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (26, 48, TIMESTAMP '2026-11-13 08:27:00', 102, 8, 11, 1, 'A03-S102-E08');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (27, 42, TIMESTAMP '2026-11-13 08:32:00', 103, 7, 11, 1, 'A03-S103-E07');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (28, 10, TIMESTAMP '2026-08-13 10:17:00', 107, 9, 12, 2, 'A04-S107-E09');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (29, 16, TIMESTAMP '2026-08-13 10:22:00', 107, 10, 12, 2, 'A04-S107-E10');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (30, 18, TIMESTAMP '2026-08-13 10:27:00', 107, 11, 12, 2, 'A04-S107-E11');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (31, 8, TIMESTAMP '2026-08-13 10:32:00', 108, 9, 12, 2, 'A04-S108-E09');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (32, 12, TIMESTAMP '2026-08-13 10:37:00', 108, 10, 12, 2, 'A04-S108-E10');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (33, 27, TIMESTAMP '2026-08-13 10:42:00', 108, 11, 12, 2, 'A04-S108-E11');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (34, 18, TIMESTAMP '2026-08-13 10:47:00', 109, 10, 12, 2, 'A04-S109-E10');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (35, 30, TIMESTAMP '2026-08-13 10:52:00', 109, 11, 12, 2, 'A04-S109-E11');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (36, 9, TIMESTAMP '2026-08-13 10:57:00', 110, 9, 12, 2, 'A04-S110-E09');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (37, 24, TIMESTAMP '2026-08-13 11:02:00', 110, 11, 12, 2, 'A04-S110-E11');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (38, 10, TIMESTAMP '2026-08-13 11:07:00', 111, 9, 12, 2, 'A04-S111-E09');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (39, 16, TIMESTAMP '2026-08-13 11:12:00', 111, 10, 12, 2, 'A04-S111-E10');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (40, 50, TIMESTAMP '2026-09-03 10:17:00', 107, 13, 12, 2, 'A05-S107-E13');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (41, 48, TIMESTAMP '2026-09-03 10:22:00', 107, 14, 12, 2, 'A05-S107-E14');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (42, 40, TIMESTAMP '2026-09-03 10:27:00', 108, 12, 12, 2, 'A05-S108-E12');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (43, 36, TIMESTAMP '2026-09-03 10:32:00', 108, 14, 12, 2, 'A05-S108-E14');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (44, 32, TIMESTAMP '2026-09-03 10:37:00', 109, 12, 12, 2, 'A05-S109-E12');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (45, 30, TIMESTAMP '2026-09-03 10:42:00', 109, 13, 12, 2, 'A05-S109-E13');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (46, 24, TIMESTAMP '2026-09-03 10:47:00', 110, 12, 12, 2, 'A05-S110-E12');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (47, 45, TIMESTAMP '2026-09-03 10:52:00', 110, 13, 12, 2, 'A05-S110-E13');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (48, 60, TIMESTAMP '2026-09-03 10:57:00', 110, 14, 12, 2, 'A05-S110-E14');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (49, 36, TIMESTAMP '2026-09-03 11:02:00', 111, 12, 12, 2, 'A05-S111-E12');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (50, 50, TIMESTAMP '2026-09-03 11:07:00', 111, 13, 12, 2, 'A05-S111-E13');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (51, 48, TIMESTAMP '2026-09-03 11:12:00', 111, 14, 12, 2, 'A05-S111-E14');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (52, 9, TIMESTAMP '2026-08-14 14:17:00', 112, 15, 13, 3, 'A06-S112-E15');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (53, 20, TIMESTAMP '2026-08-14 14:22:00', 112, 16, 13, 3, 'A06-S112-E16');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (54, 10, TIMESTAMP '2026-08-14 14:27:00', 113, 15, 13, 3, 'A06-S113-E15');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (55, 16, TIMESTAMP '2026-08-14 14:32:00', 113, 16, 13, 3, 'A06-S113-E16');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (56, 18, TIMESTAMP '2026-08-14 14:37:00', 113, 17, 13, 3, 'A06-S113-E17');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (57, 18, TIMESTAMP '2026-08-14 14:42:00', 115, 16, 13, 3, 'A06-S115-E16');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (58, 30, TIMESTAMP '2026-08-14 14:47:00', 115, 17, 13, 3, 'A06-S115-E17');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (59, 9, TIMESTAMP '2026-08-14 14:52:00', 116, 15, 13, 3, 'A06-S116-E15');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (60, 24, TIMESTAMP '2026-08-14 14:57:00', 116, 17, 13, 3, 'A06-S116-E17');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (61, 30, TIMESTAMP '2026-10-08 14:17:00', 112, 18, 13, 3, 'A07-S112-E18');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (62, 54, TIMESTAMP '2026-10-08 14:22:00', 112, 19, 13, 3, 'A07-S112-E19');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (63, 60, TIMESTAMP '2026-10-08 14:27:00', 113, 19, 13, 3, 'A07-S113-E19');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (64, 40, TIMESTAMP '2026-10-08 14:32:00', 115, 18, 13, 3, 'A07-S115-E18');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (65, 36, TIMESTAMP '2026-10-08 14:37:00', 115, 19, 13, 3, 'A07-S115-E19');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (66, 30, TIMESTAMP '2026-10-08 14:42:00', 116, 18, 13, 3, 'A07-S116-E18');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (67, 54, TIMESTAMP '2026-10-08 14:47:00', 116, 19, 13, 3, 'A07-S116-E19');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (68, 8, TIMESTAMP '2026-08-18 08:17:00', 117, 20, 14, 4, 'A08-S117-E20');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (69, 12, TIMESTAMP '2026-08-18 08:22:00', 117, 21, 14, 4, 'A08-S117-E21');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (70, 6, TIMESTAMP '2026-08-18 08:27:00', 118, 20, 14, 4, 'A08-S118-E20');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (71, 18, TIMESTAMP '2026-08-18 08:32:00', 118, 21, 14, 4, 'A08-S118-E21');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (72, 30, TIMESTAMP '2026-08-18 08:37:00', 118, 22, 14, 4, 'A08-S118-E22');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (73, 16, TIMESTAMP '2026-08-18 08:42:00', 120, 21, 14, 4, 'A08-S120-E21');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (74, 18, TIMESTAMP '2026-08-18 08:47:00', 120, 22, 14, 4, 'A08-S120-E22');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (75, 6, TIMESTAMP '2026-03-10 08:17:00', 121, 25, 11, 5, 'A10-S121-E25');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (76, 9, TIMESTAMP '2026-03-10 08:22:00', 122, 25, 11, 5, 'A10-S122-E25');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (77, 20, TIMESTAMP '2026-03-10 08:27:00', 122, 26, 11, 5, 'A10-S122-E26');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (78, 10, TIMESTAMP '2026-03-10 08:32:00', 123, 25, 11, 5, 'A10-S123-E25');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (79, 16, TIMESTAMP '2026-03-10 08:37:00', 123, 26, 11, 5, 'A10-S123-E26');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (80, 9, TIMESTAMP '2026-03-12 10:17:00', 124, 27, 12, 6, 'A11-S124-E27');
-INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, group_id, redemption_code) VALUES (81, 20, TIMESTAMP '2026-03-12 10:22:00', 124, 28, 12, 6, 'A11-S124-E28');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (1, 18, TIMESTAMP '2026-08-12 08:17:00', 101, 2, 11, 'A01-S101-E02');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (2, 30, TIMESTAMP '2026-08-12 08:22:00', 101, 3, 11, 'A01-S101-E03');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (3, 9, TIMESTAMP '2026-08-12 08:27:00', 102, 1, 11, 'A01-S102-E01');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (4, 24, TIMESTAMP '2026-08-12 08:32:00', 102, 3, 11, 'A01-S102-E03');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (5, 10, TIMESTAMP '2026-08-12 08:37:00', 103, 1, 11, 'A01-S103-E01');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (6, 16, TIMESTAMP '2026-08-12 08:42:00', 103, 2, 11, 'A01-S103-E02');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (7, 8, TIMESTAMP '2026-08-12 08:47:00', 104, 1, 11, 'A01-S104-E01');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (8, 12, TIMESTAMP '2026-08-12 08:52:00', 104, 2, 11, 'A01-S104-E02');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (9, 27, TIMESTAMP '2026-08-12 08:57:00', 104, 3, 11, 'A01-S104-E03');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (10, 20, TIMESTAMP '2026-08-12 09:02:00', 106, 2, 11, 'A01-S106-E02');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (11, 24, TIMESTAMP '2026-08-12 09:07:00', 106, 3, 11, 'A01-S106-E03');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (12, 32, TIMESTAMP '2026-09-02 08:17:00', 101, 4, 11, 'A02-S101-E04');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (13, 30, TIMESTAMP '2026-09-02 08:22:00', 101, 5, 11, 'A02-S101-E05');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (14, 24, TIMESTAMP '2026-09-02 08:27:00', 102, 4, 11, 'A02-S102-E04');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (15, 45, TIMESTAMP '2026-09-02 08:32:00', 102, 5, 11, 'A02-S102-E05');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (16, 60, TIMESTAMP '2026-09-02 08:37:00', 102, 6, 11, 'A02-S102-E06');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (17, 36, TIMESTAMP '2026-09-02 08:42:00', 103, 4, 11, 'A02-S103-E04');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (18, 50, TIMESTAMP '2026-09-02 08:47:00', 103, 5, 11, 'A02-S103-E05');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (19, 48, TIMESTAMP '2026-09-02 08:52:00', 103, 6, 11, 'A02-S103-E06');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (20, 40, TIMESTAMP '2026-09-02 08:57:00', 104, 5, 11, 'A02-S104-E05');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (21, 36, TIMESTAMP '2026-09-02 09:02:00', 104, 6, 11, 'A02-S104-E06');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (22, 24, TIMESTAMP '2026-09-02 09:07:00', 106, 4, 11, 'A02-S106-E04');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (23, 45, TIMESTAMP '2026-09-02 09:12:00', 106, 5, 11, 'A02-S106-E05');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (24, 70, TIMESTAMP '2026-11-13 08:17:00', 101, 7, 11, 'A03-S101-E07');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (25, 64, TIMESTAMP '2026-11-13 08:22:00', 101, 8, 11, 'A03-S101-E08');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (26, 48, TIMESTAMP '2026-11-13 08:27:00', 102, 8, 11, 'A03-S102-E08');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (27, 42, TIMESTAMP '2026-11-13 08:32:00', 103, 7, 11, 'A03-S103-E07');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (28, 10, TIMESTAMP '2026-08-13 10:17:00', 107, 9, 12, 'A04-S107-E09');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (29, 16, TIMESTAMP '2026-08-13 10:22:00', 107, 10, 12, 'A04-S107-E10');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (30, 18, TIMESTAMP '2026-08-13 10:27:00', 107, 11, 12, 'A04-S107-E11');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (31, 8, TIMESTAMP '2026-08-13 10:32:00', 108, 9, 12, 'A04-S108-E09');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (32, 12, TIMESTAMP '2026-08-13 10:37:00', 108, 10, 12, 'A04-S108-E10');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (33, 27, TIMESTAMP '2026-08-13 10:42:00', 108, 11, 12, 'A04-S108-E11');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (34, 18, TIMESTAMP '2026-08-13 10:47:00', 109, 10, 12, 'A04-S109-E10');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (35, 30, TIMESTAMP '2026-08-13 10:52:00', 109, 11, 12, 'A04-S109-E11');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (36, 9, TIMESTAMP '2026-08-13 10:57:00', 110, 9, 12, 'A04-S110-E09');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (37, 24, TIMESTAMP '2026-08-13 11:02:00', 110, 11, 12, 'A04-S110-E11');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (38, 10, TIMESTAMP '2026-08-13 11:07:00', 111, 9, 12, 'A04-S111-E09');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (39, 16, TIMESTAMP '2026-08-13 11:12:00', 111, 10, 12, 'A04-S111-E10');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (40, 50, TIMESTAMP '2026-09-03 10:17:00', 107, 13, 12, 'A05-S107-E13');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (41, 48, TIMESTAMP '2026-09-03 10:22:00', 107, 14, 12, 'A05-S107-E14');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (42, 40, TIMESTAMP '2026-09-03 10:27:00', 108, 12, 12, 'A05-S108-E12');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (43, 36, TIMESTAMP '2026-09-03 10:32:00', 108, 14, 12, 'A05-S108-E14');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (44, 32, TIMESTAMP '2026-09-03 10:37:00', 109, 12, 12, 'A05-S109-E12');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (45, 30, TIMESTAMP '2026-09-03 10:42:00', 109, 13, 12, 'A05-S109-E13');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (46, 24, TIMESTAMP '2026-09-03 10:47:00', 110, 12, 12, 'A05-S110-E12');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (47, 45, TIMESTAMP '2026-09-03 10:52:00', 110, 13, 12, 'A05-S110-E13');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (48, 60, TIMESTAMP '2026-09-03 10:57:00', 110, 14, 12, 'A05-S110-E14');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (49, 36, TIMESTAMP '2026-09-03 11:02:00', 111, 12, 12, 'A05-S111-E12');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (50, 50, TIMESTAMP '2026-09-03 11:07:00', 111, 13, 12, 'A05-S111-E13');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (51, 48, TIMESTAMP '2026-09-03 11:12:00', 111, 14, 12, 'A05-S111-E14');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (52, 9, TIMESTAMP '2026-08-14 14:17:00', 112, 15, 13, 'A06-S112-E15');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (53, 20, TIMESTAMP '2026-08-14 14:22:00', 112, 16, 13, 'A06-S112-E16');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (54, 10, TIMESTAMP '2026-08-14 14:27:00', 113, 15, 13, 'A06-S113-E15');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (55, 16, TIMESTAMP '2026-08-14 14:32:00', 113, 16, 13, 'A06-S113-E16');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (56, 18, TIMESTAMP '2026-08-14 14:37:00', 113, 17, 13, 'A06-S113-E17');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (57, 18, TIMESTAMP '2026-08-14 14:42:00', 115, 16, 13, 'A06-S115-E16');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (58, 30, TIMESTAMP '2026-08-14 14:47:00', 115, 17, 13, 'A06-S115-E17');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (59, 9, TIMESTAMP '2026-08-14 14:52:00', 116, 15, 13, 'A06-S116-E15');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (60, 24, TIMESTAMP '2026-08-14 14:57:00', 116, 17, 13, 'A06-S116-E17');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (61, 30, TIMESTAMP '2026-10-08 14:17:00', 112, 18, 13, 'A07-S112-E18');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (62, 54, TIMESTAMP '2026-10-08 14:22:00', 112, 19, 13, 'A07-S112-E19');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (63, 60, TIMESTAMP '2026-10-08 14:27:00', 113, 19, 13, 'A07-S113-E19');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (64, 40, TIMESTAMP '2026-10-08 14:32:00', 115, 18, 13, 'A07-S115-E18');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (65, 36, TIMESTAMP '2026-10-08 14:37:00', 115, 19, 13, 'A07-S115-E19');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (66, 30, TIMESTAMP '2026-10-08 14:42:00', 116, 18, 13, 'A07-S116-E18');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (67, 54, TIMESTAMP '2026-10-08 14:47:00', 116, 19, 13, 'A07-S116-E19');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (68, 8, TIMESTAMP '2026-08-18 08:17:00', 117, 20, 14, 'A08-S117-E20');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (69, 12, TIMESTAMP '2026-08-18 08:22:00', 117, 21, 14, 'A08-S117-E21');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (70, 6, TIMESTAMP '2026-08-18 08:27:00', 118, 20, 14, 'A08-S118-E20');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (71, 18, TIMESTAMP '2026-08-18 08:32:00', 118, 21, 14, 'A08-S118-E21');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (72, 30, TIMESTAMP '2026-08-18 08:37:00', 118, 22, 14, 'A08-S118-E22');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (73, 16, TIMESTAMP '2026-08-18 08:42:00', 120, 21, 14, 'A08-S120-E21');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (74, 18, TIMESTAMP '2026-08-18 08:47:00', 120, 22, 14, 'A08-S120-E22');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (75, 6, TIMESTAMP '2026-03-10 08:17:00', 121, 25, 11, 'A10-S121-E25');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (76, 9, TIMESTAMP '2026-03-10 08:22:00', 122, 25, 11, 'A10-S122-E25');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (77, 20, TIMESTAMP '2026-03-10 08:27:00', 122, 26, 11, 'A10-S122-E26');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (78, 10, TIMESTAMP '2026-03-10 08:32:00', 123, 25, 11, 'A10-S123-E25');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (79, 16, TIMESTAMP '2026-03-10 08:37:00', 123, 26, 11, 'A10-S123-E26');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (80, 9, TIMESTAMP '2026-03-12 10:17:00', 124, 27, 12, 'A11-S124-E27');
+INSERT INTO score (id, points, award_date, student_id, activity_exercise_id, professor_id, redemption_code) VALUES (81, 20, TIMESTAMP '2026-03-12 10:22:00', 124, 28, 12, 'A11-S124-E28');
+
 COMMIT;
