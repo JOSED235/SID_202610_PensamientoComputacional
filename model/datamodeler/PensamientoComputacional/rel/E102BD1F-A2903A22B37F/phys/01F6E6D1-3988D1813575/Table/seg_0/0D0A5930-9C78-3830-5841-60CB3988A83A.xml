@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="level_rank" directorySegmentName="seg_0" id="0D0A5930-9C78-3830-5841-60CB3988A83A">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="id" id="069BAFD5-48A3-A63A-D507-6B4AE79E440C">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="max_points" id="9FA61E10-F164-4D15-72D6-8F389CAA04B4">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="min_points" id="C043E89F-B04A-00E0-B44D-9DCEC1BDE6B4">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="name" id="E6C5059F-E469-E96E-E07D-BA0BBD595D2A">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="level_rank_PK" id="16C3FE6A-6644-D114-23D0-C80E41E3A280">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle">
+<TableCheckConstraint name="chk_level_max_pts" id="C67B5FC0-07E4-A3E2-681C-592878F305F9">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<nameChanged>true</nameChanged>
+</TableCheckConstraint>
+</tableCheckConstraints>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="uq_level_rank_name" id="058A420A-1EFD-AE56-CF4F-FCDD7FEF87ED">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev20c>

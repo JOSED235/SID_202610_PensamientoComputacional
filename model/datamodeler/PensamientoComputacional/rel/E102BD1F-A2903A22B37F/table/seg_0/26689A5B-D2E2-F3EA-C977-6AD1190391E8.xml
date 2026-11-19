@@ -1,0 +1,195 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="26689A5B-D2E2-F3EA-C977-6AD1190391E8" name="activity">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Actividades evaluativas compuestas por ejercicios, programadas para un grupo]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>A230994E-59A0-59E4-6218-174C981FCE6F</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="035956A3-AC19-3EC6-8305-9D408D2C8C46">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico de la actividad]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>32940CEC-C0A7-6B3C-A811-518800C90F21</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementStartWith>1000</autoIncrementStartWith>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="name" id="BA16A0EB-51E0-6AAB-7EC6-B524693D7425">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nombre de la actividad (ej. Ciclos, Condicionales)]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>466E8C62-2B4B-D39C-C071-4CAC78EE6797</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>B353D644-3B62-A17C-1F56-1AFDFC20151A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="start_date" id="782E3358-984F-F814-9F11-C92FB0C0CB9A">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha y hora de inicio / apertura de la actividad]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>F8AFF923-0C7A-AEEB-5792-786D2B25B8DC</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<domain>3B441B50-C9FD-C00B-C611-5B582C1EF095</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="end_date" id="C9B1E13D-762D-0F1D-E1B4-B77905FB34B6">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha y hora de cierre de la actividad]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>3D9FE10B-C023-B03A-4109-1676892B9197</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<domain>3B441B50-C9FD-C00B-C611-5B582C1EF095</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="status_id" id="8C41BB5A-5D39-11B0-12A3-3CE1B18984A2">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK al estado de la actividad (BORRADOR, ACTIVA, CERRADA)]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>E19F7C49-DCFA-2DEE-DD7B-82EEEA5DB2B3</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="85209030-AC6C-D49E-DA42-CB245DB51B3D" referredColumn="CBF9F43B-361C-26EA-DF85-B0B9F3DCB884"/>
+</associations>
+</Column>
+<Column name="professor_id" id="CAD6D0BF-8DD7-5515-2F7B-920C63925B40">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK al profesor que creo y gestiona la actividad]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>AEB3274E-1AAD-8666-7662-2BCE09AE7EED</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0D4A7C2A-D938-711C-2E73-293BAA80D5C5" referredColumn="9DE0384D-7FEA-459D-8F51-A5419F25D086"/>
+</associations>
+</Column>
+<Column name="group_id" id="AD58C7E4-9C41-2153-8BDE-38510DF06711">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK al grupo de clase destinatario]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>3D8501CE-26BB-60E6-D756-C62FBAE88750</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F64798F3-072A-6195-FE65-6CD87CA77668" referredColumn="6BA4424C-468D-20E4-B7D4-2C13C4A32A19"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="23836938-9E1C-E567-029C-3849177C8DAB" name="activity_PK">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>4D39C940-0E39-9925-7ECC-2B81CA229B9E</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="035956A3-AC19-3EC6-8305-9D408D2C8C46"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3B7608B4-07DE-C062-2442-5425FDF166A0" name="idx_activity_group">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>0C939371-2FEF-D8FA-1D77-E2F086C4CA0F</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AD58C7E4-9C41-2153-8BDE-38510DF06711"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="76D914DF-029A-8E68-AB20-B99FFAC1F8B2" name="idx_activity_prof">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>45351E6E-DDE5-2290-B3DC-03D09F959CF7</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CAD6D0BF-8DD7-5515-2F7B-920C63925B40"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BAD20A44-023B-23D5-0B33-FABBD99FE26A" name="fk_activity_group">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AD58C7E4-9C41-2153-8BDE-38510DF06711"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="71B9F868-97CF-CEA7-A8D9-86E2D4F1A542" name="fk_activity_professor">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CAD6D0BF-8DD7-5515-2F7B-920C63925B40"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="13095106-81EA-C8AF-7DE1-801D31C6AA18" name="fk_activity_status">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8C41BB5A-5D39-11B0-12A3-3CE1B18984A2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="chk_activity_dates" directorySegmentName="seg_0" id="E8D2DA7F-5C95-EFD3-DE14-47F2B30D6AC2">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>532A0C8D-FD07-A721-752D-3772804F629F</importedID>
+<rule><![CDATA[end_date >= start_date]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

@@ -1,0 +1,31 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="difficulty_scale" directorySegmentName="seg_0" id="FBE80304-2A67-5CF1-013B-E52A0679EA1A">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="label" id="8A509A51-340C-51C0-004E-C842B8992383">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id" id="EE5FD7BB-7281-589E-0C34-64CA9DCE9FF0">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="difficulty_scale_PK" id="5F23D147-47D0-4643-D777-C1278859D0DD">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

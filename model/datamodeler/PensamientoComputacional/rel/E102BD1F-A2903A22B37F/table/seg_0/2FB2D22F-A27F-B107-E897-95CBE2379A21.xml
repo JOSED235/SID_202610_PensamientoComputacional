@@ -1,0 +1,173 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2FB2D22F-A27F-B107-E897-95CBE2379A21" name="app_user">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Entidad base de usuarios del sistema]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>8BE437E0-B718-CBEE-DB12-85B03B8DF107</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="B1D4C836-78ED-203C-DB72-BDB585BB827F">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del usuario]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>C1CE3F41-B6A3-6D5A-6426-F29B6C5204CB</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementStartWith>1000</autoIncrementStartWith>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="name" id="E292C3FD-B38F-F100-FBC9-CC3541F1E1BC">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nombre completo del usuario]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>540C2A96-8247-7A8A-2EB4-2CA688EBCD0A</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>B353D644-3B62-A17C-1F56-1AFDFC20151A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="institutional_email" id="F7FEDD2A-BF77-63E5-3B5C-5CF4D74BAA53">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Correo electronico institucional unico]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>BAA38630-8F04-F3D0-BE4B-D6B05AD78F38</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>B353D644-3B62-A17C-1F56-1AFDFC20151A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="photo_url" id="19D73348-E3F9-BF39-E064-D86CDD935405">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ruta o URL opcional de la foto de perfil]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>8612AA82-B650-E4A7-0FED-5CF30216FCE8</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>BE7B155C-09F4-1DB2-5CE7-4A743BF87155</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="password_hash" id="B576A683-D536-07A2-2748-D47F67AF8CE0">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Hash seguro de la contrasena (longitud minima 60 chars ej. bcrypt)]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>3B50C20A-A456-4367-6F84-4C809A9A2AE8</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>0A11A3AF-1C6D-D47C-3159-D4E464FDEE99</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="status_id" id="5FE4168E-43F7-7980-18DD-26E1812A1664">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK al catalogo de estado de cuenta]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>6AF4883E-EC1B-1F1A-65D3-C48468490BC6</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DEC00C39-0FB3-C4AC-100F-D9D7722FA791" referredColumn="3E4C5B2E-0649-D812-73DA-181C1082368F"/>
+</associations>
+</Column>
+<Column name="user_type_id" id="48E67146-5E74-9286-C8A5-24B329FA607E">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK al catalogo de tipo de usuario]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>7DDFC6DA-6484-DA77-5585-038DF6C98812</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D17BE1BA-7C37-3B78-63D3-2F21F03A543A" referredColumn="2B31E9E6-3FCC-DC9F-F139-F48DA33A4440"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="26A6986D-A660-6CBD-581F-FCAA35F35AD4" name="app_user_PK">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>90675082-DC16-86F6-E781-66223089B657</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B1D4C836-78ED-203C-DB72-BDB585BB827F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EB333A2B-A785-5527-8A86-B962771A3B46" name="uq_app_user_email">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>630FE022-246E-8304-BD95-332A2DEBA303</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F7FEDD2A-BF77-63E5-3B5C-5CF4D74BAA53"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C518C0EC-A05B-11BF-639B-CE199052F30F" name="fk_app_user_status">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5FE4168E-43F7-7980-18DD-26E1812A1664"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B473D04F-CB55-EF4D-9DB9-42114B57E9B1" name="fk_app_user_type">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="48E67146-5E74-9286-C8A5-24B329FA607E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="chk_app_user_pw_hash" directorySegmentName="seg_0" id="BE45C328-FFE8-3073-42DE-B52FD5C087AE">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>FE726C0F-FA7D-8C45-DEF7-61F84BCA467A</importedID>
+<rule><![CDATA[LENGTH(password_hash) >= 60]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

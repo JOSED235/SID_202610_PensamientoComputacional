@@ -1,0 +1,169 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6B362B62-04B2-E41F-5AC1-ECDEBE1751BF" name="score">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Registro de puntos otorgados a un estudiante por la resolucion de un ejercicio]]></commentInRDBMS>
+<generatorID>38F63637-8914-C860-4866-2D2E115600D8</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="FC83EDBC-10EA-AD50-9883-88FCCF88F61E">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del puntaje]]></commentInRDBMS>
+<generatorID>2319BA48-DBF5-0050-19F9-6C3AEEA8553F</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="points" id="395119FE-38E0-2D41-C692-4C146BC6AB3E">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cantidad de puntos asignados (> 0)]]></commentInRDBMS>
+<generatorID>354A0DBA-C007-BF3B-0B88-DE79331A4A5B</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<constraintName>chk_score_points_pos</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 21c" definition="points &gt; 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="award date" id="EA9F7D3C-9CEF-40BA-01C0-BF2A52566030">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha y hora exacta en la que se otorgo la puntuacion]]></commentInRDBMS>
+<generatorID>24BEA001-3EC3-276A-64A8-67EA95C2AC30</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<domain>3B441B50-C9FD-C00B-C611-5B582C1EF095</domain>
+<defaultValue>SYSTIMESTAMP</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="student id" id="147C8D66-41EF-0CB8-EBDA-1D89AFA52C65">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK al estudiante calificado]]></commentInRDBMS>
+<generatorID>4FE9B15B-0906-899E-EBA4-610B67DEA529</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<referedAttribute>0C811C88-2B75-2573-85A1-FCD9EB52D871</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="activity exercise id" id="8A045923-5396-8516-3B67-489C49A7876F">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK al ejercicio de la actividad evaluado]]></commentInRDBMS>
+<generatorID>6CB1895E-2D78-21F9-E092-D8173C50D33C</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<referedAttribute>8E5A94D0-2710-81E2-E024-DD97B49680FD</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="professor id" id="82878F15-C18F-CCF9-B3A8-9A150474DD0C">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK al profesor que califico y asigno los puntos]]></commentInRDBMS>
+<generatorID>973FEF61-0D20-B06D-4CA6-74E094A4EB41</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<referedAttribute>C4B08FC9-D3C4-2326-BBC4-ED39FD3E4FDB</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="redemption code" id="BE80CD2F-B81C-B6D8-2F9D-4966FAA711BB">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Codigo alfanumerico o QR unico usado para redimir los puntos]]></commentInRDBMS>
+<generatorID>3DE4B8F6-850A-4870-5D59-9227DA55AB39</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>CA6195EC-625A-4F49-B6FC-06C7D61E75DC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B47BEF74-B6C5-017B-01F3-DC00E563DE6A" name="score PK">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<generatorID>6A875452-7D09-5AE9-76B3-918A6F651822</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FC83EDBC-10EA-AD50-9883-88FCCF88F61E</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="5C6A285D-C0B5-94FE-1079-330D5B7CE173" name="uq score redemption code">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<generatorID>B7BA4055-E5CE-35FB-076B-AC8F231D6CF6</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>BE80CD2F-B81C-B6D8-2F9D-4966FAA711BB</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="7C33A284-6023-281C-39D1-6B086ABD7E24" name="uq score student exercise">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<generatorID>513043DF-FB39-C204-D080-D5928D51F457</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>147C8D66-41EF-0CB8-EBDA-1D89AFA52C65</attributeRef>
+<attributeRef>8A045923-5396-8516-3B67-489C49A7876F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

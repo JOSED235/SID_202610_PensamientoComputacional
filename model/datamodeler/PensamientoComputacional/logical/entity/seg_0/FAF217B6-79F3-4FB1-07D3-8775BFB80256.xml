@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FAF217B6-79F3-4FB1-07D3-8775BFB80256" name="exercise">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Banco de ejercicios de programacion]]></commentInRDBMS>
+<generatorID>29374867-9311-2EC9-E968-2E349B860A23</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="26EB7CD5-3747-67A9-0325-9F8878011D8F">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del ejercicio]]></commentInRDBMS>
+<generatorID>044CD00A-6E07-CBDB-209C-77C5536EBE5A</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="statement" id="CC9DFFD5-72B9-B796-D9CD-68563693B421">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Enunciado detallado de la consigna del ejercicio]]></commentInRDBMS>
+<generatorID>D3F23609-53A9-BB3F-3D39-CC38614A0D97</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<domain>9F9D0152-0F3B-C263-6CB1-A59F7DEEAFD8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="difficulty id" id="708BBE60-395E-ACDA-0BF4-03455D2ED97A">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK a la escala de dificultad (0 a 10)]]></commentInRDBMS>
+<generatorID>8631958E-E16E-0DFC-E7E7-24EC2BE798E1</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<referedAttribute>618CC4F7-3754-FF9E-A69F-5FB2678839F2</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="level id" id="DCA62445-0F9B-AED9-3D9E-8DF1B478481D">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK al perfil/categoria objetivo (Principiante, Killer, Pro)]]></commentInRDBMS>
+<generatorID>F04B3481-9891-8613-EAE6-04C0C01F0909</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<referedAttribute>98AFCE86-D734-3F19-4075-759F5AA80260</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="59A012E7-91BC-DE6E-01EF-40E5233CE78E" name="exercise PK">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<generatorID>1CD101E4-65F2-67F2-E3D5-14818967D5DE</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>26EB7CD5-3747-67A9-0325-9F8878011D8F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="fk_enroll_group" directorySegmentName="seg_0" id="2EBA2EC9-6F51-4837-5EF2-0A00989187A4">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<generatorID>149AB694-5841-7117-DF8F-68AC98A589A1</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<sourcePk>4021D46F-4173-80CF-2F43-331ED1792E41</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>27D0B654-15D4-B994-BCC6-0BE26612923C</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>F07BBBB7-616F-CA7B-ECC2-5D552CF4EB87</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

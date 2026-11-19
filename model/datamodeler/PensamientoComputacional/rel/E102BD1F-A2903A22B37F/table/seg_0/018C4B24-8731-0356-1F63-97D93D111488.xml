@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="018C4B24-8731-0356-1F63-97D93D111488" name="student">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Subtipo de usuario con rol Estudiante]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>CBDCDDE8-D8DB-375A-3064-7DDFF93E5A07</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="5F0EBEC4-447D-26B7-4081-B0B3A883B0FE">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[PK y FK que referencia a APP_USER(id)]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>39D70457-3768-338C-8C35-D9E1A22E036A</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ECC5E2EE-E278-7BD8-C3FA-063236847EBF" referredColumn="B1D4C836-78ED-203C-DB72-BDB585BB827F"/>
+</associations>
+</Column>
+<Column name="current_level_id" id="BC06527C-6AB5-EF6B-A6B2-8E30B7641188">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK a LEVEL_RANK que indica la categoria actual alcanzada]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>5C4C457E-9D6E-F4D9-45AF-6C3F427F5216</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7517A9CF-2F83-FAAC-4310-CA32B35F76DC" referredColumn="069BAFD5-48A3-A63A-D507-6B4AE79E440C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="91DF097B-658F-4001-B559-9ADF3056A54D" name="student_PK">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>480225AD-82D1-E916-84E6-4A2EC64D28FE</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5F0EBEC4-447D-26B7-4081-B0B3A883B0FE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C97F347F-2063-EF9F-7F24-09253E5B8095" name="fk_student_level">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BC06527C-6AB5-EF6B-A6B2-8E30B7641188"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6D1562FF-8FC5-A35A-DA43-7E1F118E96DD" name="fk_student_user">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5F0EBEC4-447D-26B7-4081-B0B3A883B0FE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

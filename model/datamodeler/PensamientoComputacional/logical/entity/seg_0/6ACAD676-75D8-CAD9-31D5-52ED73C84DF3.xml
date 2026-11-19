@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6ACAD676-75D8-CAD9-31D5-52ED73C84DF3" name="semester">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Periodos academicos del curso]]></commentInRDBMS>
+<generatorID>5DC4C614-6FD6-7183-50C8-BB90A9A40850</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="F9635A7B-E14B-EC15-18C9-32C62AF0CEB1">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del semestre]]></commentInRDBMS>
+<generatorID>36DA9C8F-FA47-B0A7-9CAF-C8768FE53FC7</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="9FC3D121-1236-462F-7133-0EB2CE77FB98">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nombre del periodo academico (ej. 2026-2)]]></commentInRDBMS>
+<generatorID>15CE9B0C-3C32-4C0D-F24D-7DD48BA3E4D8</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>E31FD49B-A429-3CE8-67A5-013376F30934</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="start date" id="7DFDBF08-8747-8D9A-601C-A9EB177FA203">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de inicio del semestre]]></commentInRDBMS>
+<generatorID>1AB9184E-5CEB-9141-BCB5-CF9E208515C3</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>3345FDF2-8DF4-7164-D5EE-4B0440534777</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="end date" id="5E1973FF-03A6-A750-58FD-D9592492BF29">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de finalizacion del semestre]]></commentInRDBMS>
+<generatorID>4F42267F-6084-FB25-E67C-EC622556AB3C</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>3345FDF2-8DF4-7164-D5EE-4B0440534777</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="active" id="1DB15D65-F127-F486-1908-B56C2C9580A2">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Indicador booleano: 1 si es el semestre activo vigente, 0 en otro caso]]></commentInRDBMS>
+<generatorID>A2A43F2A-B4D4-A8F4-7113-F20D4005F48D</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<constraintName>chk_semester_active</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>38B738FF-EB5E-F852-7D26-F391A0AD906C</domain>
+<listOfValues>
+<valueDef value="0" description=""/>
+<valueDef value="1" description=""/>
+</listOfValues>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="60B107D7-9168-A24F-EE04-9CBCD9E56FD4" name="semester PK">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<generatorID>F13F04C7-CA3B-A904-124B-17C320122612</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F9635A7B-E14B-EC15-18C9-32C62AF0CEB1</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="6473AFAD-9A85-9FB0-8306-E710FF520983" name="uq semester name">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<generatorID>5FAFCF7D-4F6B-4E47-D6F9-DBFEA19C0A0A</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>9FC3D121-1236-462F-7133-0EB2CE77FB98</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

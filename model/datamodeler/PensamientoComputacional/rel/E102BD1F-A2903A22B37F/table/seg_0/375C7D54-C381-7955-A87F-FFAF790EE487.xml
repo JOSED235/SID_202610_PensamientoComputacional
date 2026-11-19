@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="375C7D54-C381-7955-A87F-FFAF790EE487" name="user_type">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Catalogo de tipos de usuario del sistema (ESTUDIANTE, PROFESOR, ADMINISTRADOR)]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>97428A0F-83D3-3592-F1EE-DCFD2F7DED50</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="2B31E9E6-3FCC-DC9F-F139-F48DA33A4440">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del tipo de usuario]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>C19C42DB-CCDD-2203-871B-50BA1A140655</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementStartWith>100</autoIncrementStartWith>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="name" id="47C92AA8-A2E2-ED6A-68A6-0035BD4E92DE">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nombre descriptivo del tipo de usuario]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>08C73B7C-1344-B1B1-1CD3-0E1BB439A6E3</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>E31FD49B-A429-3CE8-67A5-013376F30934</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F1E8F1DE-1ED7-9719-B4D0-C6530B4CA170" name="user_type_PK">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>249183EA-045D-8B04-8216-B8C9B3B56F2A</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2B31E9E6-3FCC-DC9F-F139-F48DA33A4440"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="83E2CC9F-D277-EF95-260F-241ACEA4D971" name="uq_user_type_name">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>FC585049-7FE5-9469-71DB-5C14F1C61F9F</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="47C92AA8-A2E2-ED6A-68A6-0035BD4E92DE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

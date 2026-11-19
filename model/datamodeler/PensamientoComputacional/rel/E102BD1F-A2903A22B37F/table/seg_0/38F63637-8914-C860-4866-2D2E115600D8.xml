@@ -1,0 +1,217 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="38F63637-8914-C860-4866-2D2E115600D8" name="score">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Registro de puntos otorgados a un estudiante por la resolucion de un ejercicio]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>34F4B42E-CB61-EDEF-726C-E4324C4840D0</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="2319BA48-DBF5-0050-19F9-6C3AEEA8553F">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del puntaje]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>6ED9DB91-2DD8-D8FD-B00F-1542DD4B5425</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementStartWith>1000</autoIncrementStartWith>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="points" id="354A0DBA-C007-BF3B-0B88-DE79331A4A5B">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cantidad de puntos asignados (> 0)]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>4151CB58-30A0-895B-5CCD-E34F4BD690B0</importedID>
+<constraintName>chk_score_points_pos</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 21c" definition="points &gt; 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="award_date" id="24BEA001-3EC3-276A-64A8-67EA95C2AC30">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha y hora exacta en la que se otorgo la puntuacion]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>57EE6414-0326-260C-5DA0-E2691DF37E7D</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<domain>3B441B50-C9FD-C00B-C611-5B582C1EF095</domain>
+<defaultValue>SYSTIMESTAMP</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="student_id" id="C6B1DBD9-78E0-27D3-702C-980801907A1D">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK al estudiante calificado]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>B6B65E4F-6DFC-5AAA-29EF-C04FDCECC651</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D578CEE5-FA66-E67B-3D5F-81E37F5F7121" referredColumn="5F0EBEC4-447D-26B7-4081-B0B3A883B0FE"/>
+</associations>
+</Column>
+<Column name="activity_exercise_id" id="58A67AD6-3010-75D3-FB7E-D308631778C4">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK al ejercicio de la actividad evaluado]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>1CADC28D-9D62-CC51-65A5-6F0DC35115BE</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2FB11FC7-A4AA-8F1D-8106-1C82C2A2804A" referredColumn="FC4D52E2-5078-808C-B9E6-131610ED3F8F"/>
+</associations>
+</Column>
+<Column name="professor_id" id="3CAB2E91-2B8A-3398-D983-12AC8AB85EBE">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK al profesor que califico y asigno los puntos]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>398CADEC-01F7-4ECF-CF34-A8AEAADFDDEF</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6C7663CE-E39D-EE9D-F48F-FBB29C11D569" referredColumn="9DE0384D-7FEA-459D-8F51-A5419F25D086"/>
+</associations>
+</Column>
+<Column name="redemption_code" id="3DE4B8F6-850A-4870-5D59-9227DA55AB39">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Codigo alfanumerico o QR unico usado para redimir los puntos]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>6F26E7FD-3BC6-3562-A22E-BB31949A101C</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>CA6195EC-625A-4F49-B6FC-06C7D61E75DC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6A875452-7D09-5AE9-76B3-918A6F651822" name="score_PK">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>9D34CCBD-19E9-D563-5A8C-5F4F56B936EA</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2319BA48-DBF5-0050-19F9-6C3AEEA8553F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B7BA4055-E5CE-35FB-076B-AC8F231D6CF6" name="uq_score_redemption_code">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>53FF770E-2778-B3B4-0522-2E8770FAE8FF</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3DE4B8F6-850A-4870-5D59-9227DA55AB39"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="513043DF-FB39-C204-D080-D5928D51F457" name="uq_score_student_exercise">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>A0CA2E94-A69D-CCA4-7C42-06FF2E33020E</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C6B1DBD9-78E0-27D3-702C-980801907A1D"/>
+<colUsage columnID="58A67AD6-3010-75D3-FB7E-D308631778C4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E1F1E2F3-0304-599F-7B60-DF476439454A" name="idx_score_student">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>CC6821A3-01C0-DD9E-1825-3F1CD90B2614</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C6B1DBD9-78E0-27D3-702C-980801907A1D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0EDA3F1E-C4EF-9F5E-FA88-15FFC1C6C1BF" name="idx_score_act_ex">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>5EF6EBEC-1D52-46C1-74D2-68E5A4C11259</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="58A67AD6-3010-75D3-FB7E-D308631778C4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5556414E-010A-F819-CDEE-141DD8BC7375" name="fk_score_act_ex">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="58A67AD6-3010-75D3-FB7E-D308631778C4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5A8FABD5-5DA1-816A-8BB2-45286CE646D6" name="fk_score_professor">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3CAB2E91-2B8A-3398-D983-12AC8AB85EBE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="49698415-F5F5-B899-DAE8-10074BE28648" name="fk_score_student">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C6B1DBD9-78E0-27D3-702C-980801907A1D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

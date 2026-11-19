@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="F64798F3-072A-6195-FE65-6CD87CA77668" containerWithKeyObject="26689A5B-D2E2-F3EA-C977-6AD1190391E8" localFKIndex="BAD20A44-023B-23D5-0B33-FABBD99FE26A" name="fk_activity_group">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>EFF6CA6B-77E5-BCA7-9351-C34946F06755</importedID>
+<referredTableLongName>course_group</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>C36CCB11-FB24-ECC0-6289-7D7FDAD77C6F</referredTableID>
+<keyObject>6F43C547-EE09-5DD5-7171-6F8C2A39668B</keyObject>
+<referredKeyID>6F43C547-EE09-5DD5-7171-6F8C2A39668B</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

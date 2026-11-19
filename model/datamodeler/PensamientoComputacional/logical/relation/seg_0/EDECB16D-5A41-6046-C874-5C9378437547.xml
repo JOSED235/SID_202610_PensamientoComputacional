@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="fk_activity_professor" directorySegmentName="seg_0" id="EDECB16D-5A41-6046-C874-5C9378437547">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<generatorID>0D4A7C2A-D938-711C-2E73-293BAA80D5C5</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<sourcePk>D02DEAED-EEFD-D691-522E-B70CB60E6130</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>D214D49B-142C-1CE0-3075-D93ED2F692E6</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>1F06E6C4-B8F5-644F-E58D-E7E273DF2CE6</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="70ADA4CC-378C-B4B3-0D47-88BC04D599AF" name="level rank">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Categorias de desempeno de estudiantes segun puntos acumulados (Principiante, Killer, Pro)]]></commentInRDBMS>
+<generatorID>0D0A5930-9C78-3830-5841-60CB3988A83A</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="98AFCE86-D734-3F19-4075-759F5AA80260">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico de la categoria]]></commentInRDBMS>
+<generatorID>069BAFD5-48A3-A63A-D507-6B4AE79E440C</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="553ED4E3-DDD3-692F-2D4D-A508B2F92284">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nombre de la categoria (Principiante, Killer, Pro)]]></commentInRDBMS>
+<generatorID>E6C5059F-E469-E96E-E07D-BA0BBD595D2A</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>E31FD49B-A429-3CE8-67A5-013376F30934</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="min points" id="F8A01EDA-768F-3903-C8E5-9006B7DA98CF">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Puntaje minimo necesario para clasificar en el rango]]></commentInRDBMS>
+<generatorID>C043E89F-B04A-00E0-B44D-9DCEC1BDE6B4</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<constraintName>chk_level_min_pts</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 21c" definition="min_points &gt;= 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="max points" id="7EC1B3E0-B8A7-C6D2-4E32-0691566C8E19">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Puntaje maximo del rango (NULL para la categoria superior sin limite)]]></commentInRDBMS>
+<generatorID>9FA61E10-F164-4D15-72D6-8F389CAA04B4</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E7EE3CF7-27DE-D56B-9699-D59FE219D4F0" name="level rank PK">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<generatorID>16C3FE6A-6644-D114-23D0-C80E41E3A280</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>98AFCE86-D734-3F19-4075-759F5AA80260</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="0783461C-9DC6-93C7-896E-84564252FB37" name="uq level rank name">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<generatorID>058A420A-1EFD-AE56-CF4F-FCDD7FEF87ED</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>553ED4E3-DDD3-692F-2D4D-A508B2F92284</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

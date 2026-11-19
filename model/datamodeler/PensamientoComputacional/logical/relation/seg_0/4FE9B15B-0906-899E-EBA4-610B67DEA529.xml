@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="fk_score_student" directorySegmentName="seg_0" id="4FE9B15B-0906-899E-EBA4-610B67DEA529">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<generatorID>D578CEE5-FA66-E67B-3D5F-81E37F5F7121</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<sourcePk>60F4D0E1-9E6B-A81C-D221-0377321DC0DF</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>C13C8D4E-B408-6527-A1E5-9F89A9B75F63</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>6B362B62-04B2-E41F-5AC1-ECDEBE1751BF</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

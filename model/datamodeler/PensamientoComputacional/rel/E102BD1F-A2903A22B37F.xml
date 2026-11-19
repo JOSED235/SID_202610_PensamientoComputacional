@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="E102BD1F-4F6C-F12D-7567-A2903A22B37F" mainViewID="5C2E2062-9CC8-1DAB-C78B-3A5BD1299BAE">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:44:27 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>01F6E6D1-21D0-CFBD-ABDD-3988D1813575</selectedRDBMSSite>
+<importDDLFileStamps>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>01_ddl.sql</fileName>
+<pathName>G:\Mi unidad\01_Universidad\06_Sexto Semestre\SID1\SID_202610_PensamientoComputacional\src</pathName>
+<dbType>17</dbType>
+</importDDLFileStamp>
+</importDDLFileStamps>
+</relationalModel>

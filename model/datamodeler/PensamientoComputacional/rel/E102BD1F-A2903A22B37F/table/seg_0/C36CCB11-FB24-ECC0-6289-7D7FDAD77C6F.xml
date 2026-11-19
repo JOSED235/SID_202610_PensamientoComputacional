@@ -1,0 +1,146 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C36CCB11-FB24-ECC0-6289-7D7FDAD77C6F" name="course_group">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Grupos de clase del curso ofertados por semestre]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>5A5716C6-52C3-FF59-2820-7910FD4FBD06</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="6BA4424C-468D-20E4-B7D4-2C13C4A32A19">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del grupo]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>F7BECC50-DFD0-BE31-AF1A-335A136E32C6</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementStartWith>1000</autoIncrementStartWith>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="name" id="07A6F7A5-CE83-B40D-792F-C60397FFD465">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nombre o codigo del grupo (ej. G1, G3)]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>CBA1A4BF-632C-70F8-C6E0-01DA4BA40A6C</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>E31FD49B-A429-3CE8-67A5-013376F30934</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="semester_id" id="12F8FF80-0BEF-2520-377F-1804893FFA30">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK al semestre en el cual se oferta el grupo]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>34FE81D1-9D4D-D190-226E-3A4468573651</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A2DB7C08-6079-9DF6-E313-A652B626FB1D" referredColumn="36DA9C8F-FA47-B0A7-9CAF-C8768FE53FC7"/>
+</associations>
+</Column>
+<Column name="professor_id" id="AF67F45C-1FD3-30F1-9E58-76200E750225">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK al profesor titular responsable del grupo]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>8D00DA4B-94DE-164D-5029-A61C37DB7B03</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BDBFA2D1-3965-C2B8-75DD-CB54295D795E" referredColumn="9DE0384D-7FEA-459D-8F51-A5419F25D086"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6F43C547-EE09-5DD5-7171-6F8C2A39668B" name="course_group_PK">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>959A7941-7B82-D5A5-BE3C-CBBF1B9E15BA</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6BA4424C-468D-20E4-B7D4-2C13C4A32A19"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="51154E52-2780-DC2C-9A76-CABE6D181FB8" name="uq_group_name_per_semester">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>FB281EE7-BD87-0ECB-0284-ED9EF35322EB</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="07A6F7A5-CE83-B40D-792F-C60397FFD465"/>
+<colUsage columnID="12F8FF80-0BEF-2520-377F-1804893FFA30"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C43B2CF8-1E2C-3B16-7E4E-7348F6935CD3" name="idx_course_group_prof">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>5554F64D-2880-207B-D7E2-999B86CDDA35</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AF67F45C-1FD3-30F1-9E58-76200E750225"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A060094F-3607-23EA-4354-0C7F4090CAD0" name="idx_course_group_sem">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>99AC5039-B623-CCE9-BD62-F0B9E212753E</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="12F8FF80-0BEF-2520-377F-1804893FFA30"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="730EFB4C-5F86-D585-9783-DA450AF91CB9" name="fk_group_professor">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AF67F45C-1FD3-30F1-9E58-76200E750225"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="908161AF-68D5-58B6-EF7C-13BA384EC324" name="fk_group_semester">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="12F8FF80-0BEF-2520-377F-1804893FFA30"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

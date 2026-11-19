@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="fk_prof_user" directorySegmentName="seg_0" id="1DE77BC2-A2E0-72FB-5A2E-E80A044A5FAB">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<generatorID>862F2DC8-A389-A357-865D-D58EFAA64266</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<sourcePk>2BE467BD-109E-66D4-ECEF-8AE0E923FC1A</sourcePk>
+<dominantRole>7D65C355-7DBD-B066-DC04-5E886936B4BD</dominantRole>
+<identifying>true</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>7D65C355-7DBD-B066-DC04-5E886936B4BD</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>D214D49B-142C-1CE0-3075-D93ED2F692E6</targetEntity>
+<transferable>true</transferable>
+<deleteRule>CASCADE</deleteRule>
+</Relation>

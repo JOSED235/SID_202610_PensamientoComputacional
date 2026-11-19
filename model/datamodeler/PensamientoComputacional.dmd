@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="PensamientoComputacional" id="72071006-3FD1-9A81-67C2-D4EED97260DE" version="3.5">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:44:20 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>72071006-3FD1-9A81-67C2-D4EED97260DE</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="7354D784-1CDD-46E4-9A4F-029A0EC817B7">
+<designStoragePath>G:\01_ddl</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

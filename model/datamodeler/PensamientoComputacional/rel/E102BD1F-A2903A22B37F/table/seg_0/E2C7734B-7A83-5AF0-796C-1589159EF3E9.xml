@@ -1,0 +1,164 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E2C7734B-7A83-5AF0-796C-1589159EF3E9" name="activity_exercise">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Asociacion de ejercicios a una actividad especifica con su orden de aparicion]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>4CEE21BA-B891-BA71-983D-46383F9A8D42</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="FC4D52E2-5078-808C-B9E6-131610ED3F8F">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del ejercicio dentro de la actividad]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>ACEDD79D-1EB7-D408-8B68-DD81E26F391B</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementStartWith>1000</autoIncrementStartWith>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="activity_id" id="53F11B56-8ED2-4B9B-5DFD-4AFFA8DC59C3">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK a la actividad]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>C2C6F1CC-F340-DA39-29F0-3D967755F691</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="92537FDE-3784-BC38-2A37-385A85C62725" referredColumn="035956A3-AC19-3EC6-8305-9D408D2C8C46"/>
+</associations>
+</Column>
+<Column name="exercise_id" id="84E0FD97-39A7-54CA-C207-28685BBCBB52">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK al ejercicio asignado]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>C9DF433E-56F0-5881-ED04-E0DF727DA488</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A84DF49B-243C-AE28-F4BD-02D8DB0C8808" referredColumn="044CD00A-6E07-CBDB-209C-77C5536EBE5A"/>
+</associations>
+</Column>
+<Column name="order_num" id="8AE84CFE-DC0C-5740-0F89-69096472E6A8">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Orden relativo de presentacion del ejercicio en la actividad]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>CCC2EB36-5497-398A-E7D6-E0BC884759FF</importedID>
+<constraintName>chk_ae_order_pos</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 21c" definition="order_num &gt; 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="16727BBA-4B98-81E1-7472-6678E7327819" name="activity_exercise_PK">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>1F783E37-532A-E248-2BBF-1DC90E9B5153</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FC4D52E2-5078-808C-B9E6-131610ED3F8F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D0C523C0-FE79-1B67-BC50-FF64D5C1F12E" name="uq_ae_activity_exercise">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>886650D0-B402-7B01-C453-83E9D0C4D9F3</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="53F11B56-8ED2-4B9B-5DFD-4AFFA8DC59C3"/>
+<colUsage columnID="84E0FD97-39A7-54CA-C207-28685BBCBB52"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="ECA6C3EC-6854-09F6-319C-82612D4DAB11" name="uq_ae_activity_order">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>681F1C8E-C1A4-0927-CC1E-1C3F35865CD4</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="53F11B56-8ED2-4B9B-5DFD-4AFFA8DC59C3"/>
+<colUsage columnID="8AE84CFE-DC0C-5740-0F89-69096472E6A8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E35D666F-C099-6EE8-A0D1-9D944484FF9C" name="idx_activity_exercise_act">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>D86E3E87-EB03-1E9E-1652-5DD11B85F9F3</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="53F11B56-8ED2-4B9B-5DFD-4AFFA8DC59C3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1EA94552-79BE-5B22-1DB7-A94D31DD4390" name="idx_activity_exercise_ex">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>13992D25-E188-B14F-32CE-250F8A63D6AE</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="84E0FD97-39A7-54CA-C207-28685BBCBB52"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DEA4FD59-6C2C-8F8C-86F4-8B1B12222C2B" name="fk_ae_activity">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="53F11B56-8ED2-4B9B-5DFD-4AFFA8DC59C3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1F4AE526-2276-00B4-44C7-1A75C209FCEB" name="fk_ae_exercise">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="84E0FD97-39A7-54CA-C207-28685BBCBB52"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

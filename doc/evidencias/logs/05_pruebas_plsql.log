@@ -1,0 +1,42 @@
+=====================================================================
+INICIO DE PRUEBAS DE OBJETOS PL/SQL
+=====================================================================
+--- 1. Pruebas de la Funcion fn_total_puntos ---
+[OK] fn_total_puntos(101) devuelve puntos positivos en semestre activo (244 pts)
+[OK] fn_total_puntos(105) devuelve 0 para estudiante sin calificar
+[OK] fn_total_puntos(121, 2) devuelve 6 puntos en semestre 2026-1
+--- 2. Pruebas de la Funcion fn_nivel_por_puntos ---
+[OK] fn_nivel_por_puntos(0) retorna nivel 1 (Principiante)
+[OK] fn_nivel_por_puntos(99) retorna nivel 1 (Principiante)
+[OK] fn_nivel_por_puntos(100) retorna nivel 2 (Killer)
+[OK] fn_nivel_por_puntos(299) retorna nivel 2 (Killer)
+[OK] fn_nivel_por_puntos(300) retorna nivel 3 (Pro)
+[OK] fn_nivel_por_puntos(1000) retorna nivel 3 (Pro)
+--- 3. Pruebas del Procedimiento sp_asignar_puntos ---
+[OK] sp_asignar_puntos inserta puntaje exitosamente para estudiante matriculado
+[OK] sp_asignar_puntos rechaza puntos negativos (-20001): ORA-20001: Los puntos deben ser un numero positivo.
+[OK] sp_asignar_puntos valida profesor responsable (-20004): ORA-20004: El profesor no es el responsable de esta actividad.
+[OK] sp_asignar_puntos valida matricula en el grupo (-20005): ORA-20005: El estudiante no esta matriculado en el grupo de la actividad.
+[OK] sp_asignar_puntos rechaza actividades no activas (-20003): ORA-20003: Solo se asignan puntos en actividades ACTIVAS. Estado actual: BORRADOR
+--- 4. Pruebas del Trigger trg_app_user_valida_correo ---
+[OK] trg_app_user_valida_correo permite estudiante con dominio u.icesi.edu.co
+[OK] trg_app_user_valida_correo rechaza correo no institucional (-20010): ORA-20010: Los estudiantes deben registrarse con un correo del dominio u.icesi.edu.co.
+ORA-06512: at "SID.TRG_APP_USER_VALIDA_CORREO", line 8
+ORA-04088: error during execution
+of trigger 'SID.TRG_APP_USER_VALIDA_CORREO'
+--- 5. Pruebas del Trigger Compuesto trg_score_actualiza_nivel ---
+[OK] Nivel actual del estudiante 105 verificado
+[OK] trg_score_actualiza_nivel ascendio al estudiante 105 a nivel 2 (Killer)
+[OK] trg_score_actualiza_nivel recalcula al eliminar: estudiante 105 vuelve a nivel 1
+--- 6. Pruebas de sp_activar_semestre y sp_recalcular_niveles ---
+[OK] sp_activar_semestre garantiza exactamente 1 semestre activo
+=====================================================================
+RESUMEN DE PRUEBAS: 20 APROBADAS, 0 FALLIDAS
+=====================================================================
+
+PL/SQL procedure successfully completed.
+
+
+Rollback complete.
+
+[OK] ROLLBACK ejecutado con exito. La base de datos conserva su estado original.

@@ -1,0 +1,147 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B4D79F98-63B3-0400-34E4-421D953B1204" name="enrollment">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Registro de matricula de un estudiante en un grupo de clase]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>6D1E8F40-0315-AC9F-3E72-AF4CFA64A2A6</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="17D43F07-2F67-FDE9-2909-350C26F81FF9">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico de la matricula]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>2CB7C161-2962-CD9C-3ECA-AB35C9FA15B4</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementStartWith>1000</autoIncrementStartWith>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="student_id" id="95B6B50B-F8F5-8657-EB89-6BFE1074ABEA">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK al estudiante matriculado]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>25917178-98F3-CE85-C1EA-BB42065D7FEC</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="05F10909-97F7-F22E-7288-7F9152DEDF99" referredColumn="5F0EBEC4-447D-26B7-4081-B0B3A883B0FE"/>
+</associations>
+</Column>
+<Column name="group_id" id="3155999B-CF22-CEF6-FD7F-4AA9DA60FC5E">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK al grupo en el que se matricula]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>BD4B0A26-B3B8-BD5D-323B-9275A47B37E2</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="149AB694-5841-7117-DF8F-68AC98A589A1" referredColumn="6BA4424C-468D-20E4-B7D4-2C13C4A32A19"/>
+</associations>
+</Column>
+<Column name="registration_date" id="5B941603-DF73-AAE2-B4E0-644D001B984E">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha y hora en que se registro la matricula]]></commentInRDBMS>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>417153EF-4794-8BE0-5BC1-3387D6A6940E</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<domain>3B441B50-C9FD-C00B-C611-5B582C1EF095</domain>
+<defaultValue>SYSTIMESTAMP</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A862AB75-7956-EBC4-D2D6-E48189A50359" name="enrollment_PK">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>94848755-E914-A4F2-ECFA-BAD271722DB4</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="17D43F07-2F67-FDE9-2909-350C26F81FF9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6F18BDFB-E099-C7C8-1A54-EF8ADF5B6356" name="uq_enroll_student_group">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>F92B4956-7AE0-C875-5263-67DFC82514EF</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="95B6B50B-F8F5-8657-EB89-6BFE1074ABEA"/>
+<colUsage columnID="3155999B-CF22-CEF6-FD7F-4AA9DA60FC5E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="061596B0-715F-4D28-D3D8-A531B8B7E6C4" name="idx_enrollment_student">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>F375F284-7347-1B2C-3D2D-0C7A5ADD146C</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="95B6B50B-F8F5-8657-EB89-6BFE1074ABEA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FAFFA83C-C5DF-FF2E-6990-BB6E00FFE186" name="idx_enrollment_group">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>8114B6F5-6195-93DE-21E2-E45573C130B6</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3155999B-CF22-CEF6-FD7F-4AA9DA60FC5E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AB6B9E98-EC47-C2BA-8B41-AA0545FC3CCB" name="fk_enroll_group">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3155999B-CF22-CEF6-FD7F-4AA9DA60FC5E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BB7DBF69-EB92-9597-6126-D1ECCDE71014" name="fk_enroll_student">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="95B6B50B-F8F5-8657-EB89-6BFE1074ABEA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

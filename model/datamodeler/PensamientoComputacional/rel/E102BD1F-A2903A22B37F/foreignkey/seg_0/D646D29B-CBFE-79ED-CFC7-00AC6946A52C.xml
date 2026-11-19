@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D646D29B-CBFE-79ED-CFC7-00AC6946A52C" containerWithKeyObject="29374867-9311-2EC9-E968-2E349B860A23" localFKIndex="C411C560-84EC-2DAD-F625-E7A5C418F89E" name="fk_exercise_diff">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>BDBB3962-69AE-FAD3-6361-94D5A12421A9</importedID>
+<referredTableLongName>difficulty_scale</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>FBE80304-2A67-5CF1-013B-E52A0679EA1A</referredTableID>
+<keyObject>5F23D147-47D0-4643-D777-C1278859D0DD</keyObject>
+<referredKeyID>5F23D147-47D0-4643-D777-C1278859D0DD</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

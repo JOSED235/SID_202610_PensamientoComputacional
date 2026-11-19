@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="fk_exercise_diff" directorySegmentName="seg_0" id="8631958E-E16E-0DFC-E7E7-24EC2BE798E1">
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:55:17 UTC</createdTime>
+<generatorID>D646D29B-CBFE-79ED-CFC7-00AC6946A52C</generatorID>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<engineerTo>
+<item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>
+</engineerTo>
+<sourcePk>083B1DB5-B8BB-DE01-CB53-45684487C6C8</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>87F09C53-F0EB-A01B-BFEB-BAB38D041CB1</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>FAF217B6-79F3-4FB1-07D3-8775BFB80256</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

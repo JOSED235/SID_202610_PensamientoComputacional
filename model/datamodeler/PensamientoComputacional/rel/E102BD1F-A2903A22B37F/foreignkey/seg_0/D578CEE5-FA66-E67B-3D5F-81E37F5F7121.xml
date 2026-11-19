@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D578CEE5-FA66-E67B-3D5F-81E37F5F7121" containerWithKeyObject="38F63637-8914-C860-4866-2D2E115600D8" localFKIndex="49698415-F5F5-B899-DAE8-10074BE28648" name="fk_score_student">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>670464BD-9655-BC8D-3861-2F044F3009C4</importedID>
+<referredTableLongName>student</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>018C4B24-8731-0356-1F63-97D93D111488</referredTableID>
+<keyObject>91DF097B-658F-4001-B559-9ADF3056A54D</keyObject>
+<referredKeyID>91DF097B-658F-4001-B559-9ADF3056A54D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

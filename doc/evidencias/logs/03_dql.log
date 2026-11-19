@@ -1,0 +1,686 @@
+
+GRUPO						   ESTUDIANTE
+-------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------
+CORREO																		       CATEGORIA
+------------------------------------------------------------------------------------------------------------------------------------------------------ --------------------------------------------------
+ESTADO_CUENTA					   PROFESOR
+-------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------
+FECHA_REGISTRO
+---------------------------------------------------------------------------
+G1						   Andres Felipe Mora
+andres.mora@u.icesi.edu.co															       Killer
+ACTIVO						   Laura Mejia Cardenas
+05-AUG-26 01.08.00.000000 PM
+
+G1						   Camila Restrepo Salazar
+camila.restrepo@u.icesi.edu.co															       Principiante
+ACTIVO						   Laura Mejia Cardenas
+06-AUG-26 02.15.00.000000 PM
+
+G1						   Daniel Ortiz Velez
+daniel.ortiz@u.icesi.edu.co															       Killer
+ACTIVO						   Laura Mejia Cardenas
+07-AUG-26 03.22.00.000000 PM
+
+G1						   Mariana Gil Herrera
+mariana.gil@u.icesi.edu.co															       Killer
+ACTIVO						   Laura Mejia Cardenas
+04-AUG-26 12.01.00.000000 PM
+
+G1						   Samuel Cardenas Londono
+samuel.cardenas@u.icesi.edu.co															       Killer
+ACTIVO						   Laura Mejia Cardenas
+03-AUG-26 11.54.00.000000 AM
+
+G1						   Valentina Ospina Rojas
+valentina.ospina@u.icesi.edu.co 														       Killer
+ACTIVO						   Laura Mejia Cardenas
+08-AUG-26 10.47.00.000000 AM
+
+G3						   Isabela Munoz Arias
+isabela.munoz@u.icesi.edu.co															       Killer
+ACTIVO						   Ricardo Salcedo Ponce
+04-AUG-26 09.43.00.000000 AM
+
+G3						   Juan Pablo Cifuentes
+juan.cifuentes@u.icesi.edu.co															       Killer
+ACTIVO						   Ricardo Salcedo Ponce
+03-AUG-26 08.36.00.000000 AM
+
+G3						   Luciana Benitez Cruz
+luciana.benitez@u.icesi.edu.co															       Killer
+ACTIVO						   Ricardo Salcedo Ponce
+06-AUG-26 11.57.00.000000 AM
+
+G3						   Mateo Zapata Giraldo
+mateo.zapata@u.icesi.edu.co															       Killer
+ACTIVO						   Ricardo Salcedo Ponce
+05-AUG-26 10.50.00.000000 AM
+
+G3						   Sofia Navarro Duque
+sofia.navarro@u.icesi.edu.co															       Killer
+ACTIVO						   Ricardo Salcedo Ponce
+08-AUG-26 04.29.00.000000 PM
+
+G5						   Gabriela Montoya Lasso
+gabriela.montoya@u.icesi.edu.co 														       Killer
+ACTIVO						   Adriana Burbano Lemos
+08-AUG-26 01.11.00.000000 PM
+
+G5						   Nicolas Aristizabal Mena
+nicolas.aristizabal@u.icesi.edu.co														       Principiante
+ACTIVO						   Adriana Burbano Lemos
+03-AUG-26 02.18.00.000000 PM
+
+G5						   Paula Andrea Rios
+paula.rios@u.icesi.edu.co															       Killer
+ACTIVO						   Adriana Burbano Lemos
+04-AUG-26 03.25.00.000000 PM
+
+G5						   Santiago Quintero Pardo
+santiago.quintero@u.icesi.edu.co														       Killer
+ACTIVO						   Adriana Burbano Lemos
+07-AUG-26 12.04.00.000000 PM
+
+G5						   Sebastian Caicedo Mena
+sebastian.caicedo@u.icesi.edu.co														       Killer
+ACTIVO						   Adriana Burbano Lemos
+05-AUG-26 04.32.00.000000 PM
+
+G7						   Emmanuel Henao Posada
+emmanuel.henao@u.icesi.edu.co															       Principiante
+ACTIVO						   Hector Fabio Marin
+07-AUG-26 09.46.00.000000 AM
+
+G7						   Juliana Cortes Bedoya
+juliana.cortes@u.icesi.edu.co															       Principiante
+ACTIVO						   Hector Fabio Marin
+08-AUG-26 10.53.00.000000 AM
+
+G7						   Manuela Escobar Toro
+manuela.escobar@u.icesi.edu.co															       Principiante
+ACTIVO						   Hector Fabio Marin
+06-AUG-26 08.39.00.000000 AM
+
+G7						   Tomas Villegas Orozco
+tomas.villegas@u.icesi.edu.co															       Principiante
+ACTIVO						   Hector Fabio Marin
+03-AUG-26 11.00.00.000000 AM
+
+
+20 rows selected.
+
+
+GRUPO						     POSICION ESTUDIANTE																	     TOTAL_PUNTOS
+-------------------------------------------------- ---------- ------------------------------------------------------------------------------------------------------------------------------------------------------ ------------
+G1							    1 Valentina Ospina Rojas																	      244
+G1							    2 Samuel Cardenas Londono																	      210
+G1							    3 Mariana Gil Herrera																	      202
+G1							    4 Andres Felipe Mora																	      123
+G1							    5 Daniel Ortiz Velez																	      113
+G3							    1 Mateo Zapata Giraldo																	      162
+G3							    2 Luciana Benitez Cruz																	      160
+G3							    3 Sofia Navarro Duque																	      142
+G3							    4 Juan Pablo Cifuentes																	      123
+G3							    5 Isabela Munoz Arias																	      110
+G5							    1 Paula Andrea Rios 																	      124
+G5							    2 Sebastian Caicedo Mena																	      117
+G5							    3 Santiago Quintero Pardo																	      113
+G5							    4 Gabriela Montoya Lasso																	      104
+G7							    1 Emmanuel Henao Posada																	       54
+G7							    2 Tomas Villegas Orozco																	       34
+G7							    3 Manuela Escobar Toro																	       20
+
+17 rows selected.
+
+
+ESTUDIANTE																	       GRUPO
+------------------------------------------------------------------------------------------------------------------------------------------------------ --------------------------------------------------
+CATEGORIA					   EJERCICIOS_RESUELTOS TOTAL_PUNTOS
+-------------------------------------------------- -------------------- ------------
+Valentina Ospina Rojas																       G1
+Killer								      6 	 244
+
+Samuel Cardenas Londono 															       G1
+Killer								      6 	 210
+
+Mariana Gil Herrera																       G1
+Killer								      6 	 202
+
+Mateo Zapata Giraldo																       G3
+Killer								      5 	 162
+
+Luciana Benitez Cruz																       G3
+Killer								      5 	 160
+
+Sofia Navarro Duque																       G3
+Killer								      5 	 142
+
+Paula Andrea Rios																       G5
+Killer								      4 	 124
+
+Andres Felipe Mora																       G1
+Killer								      5 	 123
+
+Juan Pablo Cifuentes																       G3
+Killer								      5 	 123
+
+Sebastian Caicedo Mena																       G5
+Killer								      4 	 117
+
+
+10 rows selected.
+
+
+ESTUDIANTE																	       GRUPO
+------------------------------------------------------------------------------------------------------------------------------------------------------ --------------------------------------------------
+ACTIVIDAD
+------------------------------------------------------------------------------------------------------------------------------------------------------
+EJERCICIO
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DIFICULTAD					   FECHA									   PUNTOS PUNTOS_ACUMULADOS
+-------------------------------------------------- --------------------------------------------------------------------------- ---------- -----------------
+Andres Felipe Mora																       G1
+Variables y tipos de datos
+Escribe un programa que lea dos numeros enteros y muestre su
+Basica						   12-AUG-26 08.47.00.000000 AM 							8		  8
+
+Andres Felipe Mora																       G1
+Variables y tipos de datos
+Calcula el area de un circulo a partir del radio ingresado p
+Facil						   12-AUG-26 08.52.00.000000 AM 						       12		 20
+
+Andres Felipe Mora																       G1
+Variables y tipos de datos
+Convierte una temperatura en grados Celsius a grados Fahrenh
+Intermedia baja 				   12-AUG-26 08.57.00.000000 AM 						       27		 47
+
+Andres Felipe Mora																       G1
+Condicionales
+Determina si un anio dado es bisiesto.
+Intermedia alta 				   02-SEP-26 08.57.00.000000 AM 						       40		 87
+
+Andres Felipe Mora																       G1
+Condicionales
+Dados tres numeros, muestra el mayor sin usar la funcion max
+Avanzada baja					   02-SEP-26 09.02.00.000000 AM 						       36		123
+
+Daniel Ortiz Velez																       G1
+Variables y tipos de datos
+Calcula el area de un circulo a partir del radio ingresado p
+Facil						   12-AUG-26 09.02.00.000000 AM 						       20		 20
+
+Daniel Ortiz Velez																       G1
+Variables y tipos de datos
+Convierte una temperatura en grados Celsius a grados Fahrenh
+Intermedia baja 				   12-AUG-26 09.07.00.000000 AM 						       24		 44
+
+Daniel Ortiz Velez																       G1
+Condicionales
+Clasifica una nota numerica entre 0.0 y 5.0 como aprobada o
+Intermedia					   02-SEP-26 09.07.00.000000 AM 						       24		 68
+
+Daniel Ortiz Velez																       G1
+Condicionales
+Determina si un anio dado es bisiesto.
+Intermedia alta 				   02-SEP-26 09.12.00.000000 AM 						       45		113
+
+Emmanuel Henao Posada																       G7
+Variables y tipos de datos
+Escribe un programa que lea dos numeros enteros y muestre su
+Basica						   18-AUG-26 08.27.00.000000 AM 							6		  6
+
+Emmanuel Henao Posada																       G7
+Variables y tipos de datos
+Calcula el area de un circulo a partir del radio ingresado p
+Facil						   18-AUG-26 08.32.00.000000 AM 						       18		 24
+
+Emmanuel Henao Posada																       G7
+Variables y tipos de datos
+Convierte una temperatura en grados Celsius a grados Fahrenh
+Intermedia baja 				   18-AUG-26 08.37.00.000000 AM 						       30		 54
+
+Gabriela Montoya Lasso																       G5
+Variables y tipos de datos
+Escribe un programa que lea dos numeros enteros y muestre su
+Basica						   14-AUG-26 02.27.00.000000 PM 						       10		 10
+
+Gabriela Montoya Lasso																       G5
+Variables y tipos de datos
+Calcula el area de un circulo a partir del radio ingresado p
+Facil						   14-AUG-26 02.32.00.000000 PM 						       16		 26
+
+Gabriela Montoya Lasso																       G5
+Variables y tipos de datos
+Convierte una temperatura en grados Celsius a grados Fahrenh
+Intermedia baja 				   14-AUG-26 02.37.00.000000 PM 						       18		 44
+
+Gabriela Montoya Lasso																       G5
+Listas
+Cuenta cuantas veces aparece cada elemento en una lista.
+Avanzada baja					   08-OCT-26 02.27.00.000000 PM 						       60		104
+
+Isabela Munoz Arias																       G3
+Variables y tipos de datos
+Calcula el area de un circulo a partir del radio ingresado p
+Facil						   13-AUG-26 10.47.00.000000 AM 						       18		 18
+
+Isabela Munoz Arias																       G3
+Variables y tipos de datos
+Convierte una temperatura en grados Celsius a grados Fahrenh
+Intermedia baja 				   13-AUG-26 10.52.00.000000 AM 						       30		 48
+
+Isabela Munoz Arias																       G3
+Condicionales
+Clasifica una nota numerica entre 0.0 y 5.0 como aprobada o
+Intermedia					   03-SEP-26 10.37.00.000000 AM 						       32		 80
+
+Isabela Munoz Arias																       G3
+Condicionales
+Determina si un anio dado es bisiesto.
+Intermedia alta 				   03-SEP-26 10.42.00.000000 AM 						       30		110
+
+Juan Pablo Cifuentes																       G3
+Variables y tipos de datos
+Escribe un programa que lea dos numeros enteros y muestre su
+Basica						   13-AUG-26 10.32.00.000000 AM 							8		  8
+
+Juan Pablo Cifuentes																       G3
+Variables y tipos de datos
+Calcula el area de un circulo a partir del radio ingresado p
+Facil						   13-AUG-26 10.37.00.000000 AM 						       12		 20
+
+Juan Pablo Cifuentes																       G3
+Variables y tipos de datos
+Convierte una temperatura en grados Celsius a grados Fahrenh
+Intermedia baja 				   13-AUG-26 10.42.00.000000 AM 						       27		 47
+
+Juan Pablo Cifuentes																       G3
+Condicionales
+Clasifica una nota numerica entre 0.0 y 5.0 como aprobada o
+Intermedia					   03-SEP-26 10.27.00.000000 AM 						       40		 87
+
+Juan Pablo Cifuentes																       G3
+Condicionales
+Dados tres numeros, muestra el mayor sin usar la funcion max
+Avanzada baja					   03-SEP-26 10.32.00.000000 AM 						       36		123
+
+Luciana Benitez Cruz																       G3
+Variables y tipos de datos
+Escribe un programa que lea dos numeros enteros y muestre su
+Basica						   13-AUG-26 11.07.00.000000 AM 						       10		 10
+
+Luciana Benitez Cruz																       G3
+Variables y tipos de datos
+Calcula el area de un circulo a partir del radio ingresado p
+Facil						   13-AUG-26 11.12.00.000000 AM 						       16		 26
+
+Luciana Benitez Cruz																       G3
+Condicionales
+Clasifica una nota numerica entre 0.0 y 5.0 como aprobada o
+Intermedia					   03-SEP-26 11.02.00.000000 AM 						       36		 62
+
+Luciana Benitez Cruz																       G3
+Condicionales
+Determina si un anio dado es bisiesto.
+Intermedia alta 				   03-SEP-26 11.07.00.000000 AM 						       50		112
+
+Luciana Benitez Cruz																       G3
+Condicionales
+Dados tres numeros, muestra el mayor sin usar la funcion max
+Avanzada baja					   03-SEP-26 11.12.00.000000 AM 						       48		160
+
+Manuela Escobar Toro																       G7
+Variables y tipos de datos
+Escribe un programa que lea dos numeros enteros y muestre su
+Basica						   18-AUG-26 08.17.00.000000 AM 							8		  8
+
+Manuela Escobar Toro																       G7
+Variables y tipos de datos
+Calcula el area de un circulo a partir del radio ingresado p
+Facil						   18-AUG-26 08.22.00.000000 AM 						       12		 20
+
+Mariana Gil Herrera																       G1
+Variables y tipos de datos
+Escribe un programa que lea dos numeros enteros y muestre su
+Basica						   12-AUG-26 08.37.00.000000 AM 						       10		 10
+
+Mariana Gil Herrera																       G1
+Variables y tipos de datos
+Calcula el area de un circulo a partir del radio ingresado p
+Facil						   12-AUG-26 08.42.00.000000 AM 						       16		 26
+
+Mariana Gil Herrera																       G1
+Condicionales
+Clasifica una nota numerica entre 0.0 y 5.0 como aprobada o
+Intermedia					   02-SEP-26 08.42.00.000000 AM 						       36		 62
+
+Mariana Gil Herrera																       G1
+Condicionales
+Determina si un anio dado es bisiesto.
+Intermedia alta 				   02-SEP-26 08.47.00.000000 AM 						       50		112
+
+Mariana Gil Herrera																       G1
+Condicionales
+Dados tres numeros, muestra el mayor sin usar la funcion max
+Avanzada baja					   02-SEP-26 08.52.00.000000 AM 						       48		160
+
+Mariana Gil Herrera																       G1
+Ciclos
+Usa un ciclo for para sumar los primeros n numeros naturales
+Avanzada					   13-NOV-26 08.32.00.000000 AM 						       42		202
+
+Mateo Zapata Giraldo																       G3
+
+ESTUDIANTE																	       GRUPO
+------------------------------------------------------------------------------------------------------------------------------------------------------ --------------------------------------------------
+ACTIVIDAD
+------------------------------------------------------------------------------------------------------------------------------------------------------
+EJERCICIO
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DIFICULTAD					   FECHA									   PUNTOS PUNTOS_ACUMULADOS
+-------------------------------------------------- --------------------------------------------------------------------------- ---------- -----------------
+Variables y tipos de datos
+Escribe un programa que lea dos numeros enteros y muestre su
+Basica						   13-AUG-26 10.57.00.000000 AM 							9		  9
+
+Mateo Zapata Giraldo																       G3
+Variables y tipos de datos
+Convierte una temperatura en grados Celsius a grados Fahrenh
+Intermedia baja 				   13-AUG-26 11.02.00.000000 AM 						       24		 33
+
+Mateo Zapata Giraldo																       G3
+Condicionales
+Clasifica una nota numerica entre 0.0 y 5.0 como aprobada o
+Intermedia					   03-SEP-26 10.47.00.000000 AM 						       24		 57
+
+Mateo Zapata Giraldo																       G3
+Condicionales
+Determina si un anio dado es bisiesto.
+Intermedia alta 				   03-SEP-26 10.52.00.000000 AM 						       45		102
+
+Mateo Zapata Giraldo																       G3
+Condicionales
+Dados tres numeros, muestra el mayor sin usar la funcion max
+Avanzada baja					   03-SEP-26 10.57.00.000000 AM 						       60		162
+
+Paula Andrea Rios																       G5
+Variables y tipos de datos
+Calcula el area de un circulo a partir del radio ingresado p
+Facil						   14-AUG-26 02.42.00.000000 PM 						       18		 18
+
+Paula Andrea Rios																       G5
+Variables y tipos de datos
+Convierte una temperatura en grados Celsius a grados Fahrenh
+Intermedia baja 				   14-AUG-26 02.47.00.000000 PM 						       30		 48
+
+Paula Andrea Rios																       G5
+Listas
+Invierte el orden de una lista sin usar reverse ni slicing.
+Intermedia alta 				   08-OCT-26 02.32.00.000000 PM 						       40		 88
+
+Paula Andrea Rios																       G5
+Listas
+Cuenta cuantas veces aparece cada elemento en una lista.
+Avanzada baja					   08-OCT-26 02.37.00.000000 PM 						       36		124
+
+Samuel Cardenas Londono 															       G1
+Variables y tipos de datos
+Escribe un programa que lea dos numeros enteros y muestre su
+Basica						   12-AUG-26 08.27.00.000000 AM 							9		  9
+
+Samuel Cardenas Londono 															       G1
+Variables y tipos de datos
+Convierte una temperatura en grados Celsius a grados Fahrenh
+Intermedia baja 				   12-AUG-26 08.32.00.000000 AM 						       24		 33
+
+Samuel Cardenas Londono 															       G1
+Condicionales
+Clasifica una nota numerica entre 0.0 y 5.0 como aprobada o
+Intermedia					   02-SEP-26 08.27.00.000000 AM 						       24		 57
+
+Samuel Cardenas Londono 															       G1
+Condicionales
+Determina si un anio dado es bisiesto.
+Intermedia alta 				   02-SEP-26 08.32.00.000000 AM 						       45		102
+
+Samuel Cardenas Londono 															       G1
+Condicionales
+Dados tres numeros, muestra el mayor sin usar la funcion max
+Avanzada baja					   02-SEP-26 08.37.00.000000 AM 						       60		162
+
+Samuel Cardenas Londono 															       G1
+Ciclos
+Muestra todos los numeros primos menores o iguales a n.
+Muy avanzada					   13-NOV-26 08.27.00.000000 AM 						       48		210
+
+Santiago Quintero Pardo 															       G5
+Variables y tipos de datos
+Escribe un programa que lea dos numeros enteros y muestre su
+Basica						   14-AUG-26 02.17.00.000000 PM 							9		  9
+
+Santiago Quintero Pardo 															       G5
+Variables y tipos de datos
+Calcula el area de un circulo a partir del radio ingresado p
+Facil						   14-AUG-26 02.22.00.000000 PM 						       20		 29
+
+Santiago Quintero Pardo 															       G5
+Listas
+Invierte el orden de una lista sin usar reverse ni slicing.
+Intermedia alta 				   08-OCT-26 02.17.00.000000 PM 						       30		 59
+
+Santiago Quintero Pardo 															       G5
+Listas
+Cuenta cuantas veces aparece cada elemento en una lista.
+Avanzada baja					   08-OCT-26 02.22.00.000000 PM 						       54		113
+
+Sebastian Caicedo Mena																       G5
+Variables y tipos de datos
+Escribe un programa que lea dos numeros enteros y muestre su
+Basica						   14-AUG-26 02.52.00.000000 PM 							9		  9
+
+Sebastian Caicedo Mena																       G5
+Variables y tipos de datos
+Convierte una temperatura en grados Celsius a grados Fahrenh
+Intermedia baja 				   14-AUG-26 02.57.00.000000 PM 						       24		 33
+
+Sebastian Caicedo Mena																       G5
+Listas
+Invierte el orden de una lista sin usar reverse ni slicing.
+Intermedia alta 				   08-OCT-26 02.42.00.000000 PM 						       30		 63
+
+Sebastian Caicedo Mena																       G5
+Listas
+Cuenta cuantas veces aparece cada elemento en una lista.
+Avanzada baja					   08-OCT-26 02.47.00.000000 PM 						       54		117
+
+Sofia Navarro Duque																       G3
+Variables y tipos de datos
+Escribe un programa que lea dos numeros enteros y muestre su
+Basica						   13-AUG-26 10.17.00.000000 AM 						       10		 10
+
+Sofia Navarro Duque																       G3
+Variables y tipos de datos
+Calcula el area de un circulo a partir del radio ingresado p
+Facil						   13-AUG-26 10.22.00.000000 AM 						       16		 26
+
+Sofia Navarro Duque																       G3
+Variables y tipos de datos
+Convierte una temperatura en grados Celsius a grados Fahrenh
+Intermedia baja 				   13-AUG-26 10.27.00.000000 AM 						       18		 44
+
+Sofia Navarro Duque																       G3
+Condicionales
+Determina si un anio dado es bisiesto.
+Intermedia alta 				   03-SEP-26 10.17.00.000000 AM 						       50		 94
+
+Sofia Navarro Duque																       G3
+Condicionales
+Dados tres numeros, muestra el mayor sin usar la funcion max
+Avanzada baja					   03-SEP-26 10.22.00.000000 AM 						       48		142
+
+Tomas Villegas Orozco																       G7
+Variables y tipos de datos
+Calcula el area de un circulo a partir del radio ingresado p
+Facil						   18-AUG-26 08.42.00.000000 AM 						       16		 16
+
+Tomas Villegas Orozco																       G7
+Variables y tipos de datos
+Convierte una temperatura en grados Celsius a grados Fahrenh
+Intermedia baja 				   18-AUG-26 08.47.00.000000 AM 						       18		 34
+
+Valentina Ospina Rojas																       G1
+Variables y tipos de datos
+Calcula el area de un circulo a partir del radio ingresado p
+Facil						   12-AUG-26 08.17.00.000000 AM 						       18		 18
+
+Valentina Ospina Rojas																       G1
+Variables y tipos de datos
+Convierte una temperatura en grados Celsius a grados Fahrenh
+Intermedia baja 				   12-AUG-26 08.22.00.000000 AM 						       30		 48
+
+Valentina Ospina Rojas																       G1
+Condicionales
+Clasifica una nota numerica entre 0.0 y 5.0 como aprobada o
+Intermedia					   02-SEP-26 08.17.00.000000 AM 						       32		 80
+
+Valentina Ospina Rojas																       G1
+Condicionales
+Determina si un anio dado es bisiesto.
+Intermedia alta 				   02-SEP-26 08.22.00.000000 AM 						       30		110
+
+Valentina Ospina Rojas																       G1
+Ciclos
+Usa un ciclo for para sumar los primeros n numeros naturales
+Avanzada					   13-NOV-26 08.17.00.000000 AM 						       70		180
+
+Valentina Ospina Rojas																       G1
+Ciclos
+Muestra todos los numeros primos menores o iguales a n.
+Muy avanzada					   13-NOV-26 08.22.00.000000 AM 						       64		244
+
+
+74 rows selected.
+
+
+GRUPO						   ESTUDIANTE
+-------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------
+CATEGORIA					   PUNTOS_TOTALES EJERCICIOS_RESUELTOS EJERCICIOS_DISPONIBLES PCT_EJERCICIOS_RESUELTOS PROMEDIO_PUNTOS_GRUPO TASA_PARTICIPACION_GRUPO
+-------------------------------------------------- -------------- -------------------- ---------------------- ------------------------ --------------------- ------------------------
+G1						   Valentina Ospina Rojas
+Killer							      244		     6			    8			    75		       148.7			 83.3
+
+G1						   Samuel Cardenas Londono
+Killer							      210		     6			    8			    75		       148.7			 83.3
+
+G1						   Mariana Gil Herrera
+Killer							      202		     6			    8			    75		       148.7			 83.3
+
+G1						   Andres Felipe Mora
+Killer							      123		     5			    8			  62.5		       148.7			 83.3
+
+G1						   Daniel Ortiz Velez
+Killer							      113		     4			    8			    50		       148.7			 83.3
+
+G1						   Camila Restrepo Salazar
+Principiante							0		     0			    8			     0		       148.7			 83.3
+
+G3						   Mateo Zapata Giraldo
+Killer							      162		     5			    6			  83.3		       139.4			  100
+
+G3						   Luciana Benitez Cruz
+Killer							      160		     5			    6			  83.3		       139.4			  100
+
+G3						   Sofia Navarro Duque
+Killer							      142		     5			    6			  83.3		       139.4			  100
+
+G3						   Juan Pablo Cifuentes
+Killer							      123		     5			    6			  83.3		       139.4			  100
+
+G3						   Isabela Munoz Arias
+Killer							      110		     4			    6			  66.7		       139.4			  100
+
+G5						   Paula Andrea Rios
+Killer							      124		     4			    5			    80			91.6			   80
+
+G5						   Sebastian Caicedo Mena
+Killer							      117		     4			    5			    80			91.6			   80
+
+G5						   Santiago Quintero Pardo
+Killer							      113		     4			    5			    80			91.6			   80
+
+G5						   Gabriela Montoya Lasso
+Killer							      104		     4			    5			    80			91.6			   80
+
+G5						   Nicolas Aristizabal Mena
+Principiante							0		     0			    5			     0			91.6			   80
+
+G7						   Emmanuel Henao Posada
+Principiante						       54		     3			    3			   100			  27			   75
+
+G7						   Tomas Villegas Orozco
+Principiante						       34		     2			    3			  66.7			  27			   75
+
+G7						   Manuela Escobar Toro
+Principiante						       20		     2			    3			  66.7			  27			   75
+
+G7						   Juliana Cortes Bedoya
+Principiante							0		     0			    3			     0			  27			   75
+
+
+20 rows selected.
+
+
+SEMESTRE					   GRUPO
+-------------------------------------------------- --------------------------------------------------
+ACTIVIDAD																	       ESTADO						  ESTUDIANTES_INSCRITOS ESTUDIANTES_PARTICIPANTES
+------------------------------------------------------------------------------------------------------------------------------------------------------ -------------------------------------------------- --------------------- -------------------------
+TASA_PARTICIPACION PUNTOS_OTORGADOS
+------------------ ----------------
+2026-2						   G1
+Variables y tipos de datos															       CERRADA								      6 			5
+	      83.3		198
+
+2026-2						   G1
+Condicionales																	       CERRADA								      6 			5
+	      83.3		470
+
+2026-2						   G1
+Ciclos																		       ACTIVA								      6 			3
+		50		224
+
+2026-2						   G3
+Variables y tipos de datos															       CERRADA								      5 			5
+	       100		198
+
+2026-2						   G3
+Condicionales																	       CERRADA								      5 			5
+	       100		499
+
+2026-2						   G5
+Variables y tipos de datos															       CERRADA								      5 			4
+		80		154
+
+2026-2						   G5
+Listas																		       CERRADA								      5 			4
+		80		304
+
+2026-2						   G7
+Variables y tipos de datos															       CERRADA								      4 			3
+		75		108
+
+2026-2						   G7
+Funciones																	       BORRADOR 							      4 			0
+		 0		  0
+
+2026-1						   G1
+Introduccion a Python																       CERRADA								      3 			3
+	       100		 61
+
+2026-1						   G3
+Introduccion a Python																       CERRADA								      1 			1
+	       100		 29
+
+
+11 rows selected.
+

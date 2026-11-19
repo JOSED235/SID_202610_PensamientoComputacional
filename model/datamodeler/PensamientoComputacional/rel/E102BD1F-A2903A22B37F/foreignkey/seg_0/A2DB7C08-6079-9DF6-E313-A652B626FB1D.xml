@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A2DB7C08-6079-9DF6-E313-A652B626FB1D" containerWithKeyObject="C36CCB11-FB24-ECC0-6289-7D7FDAD77C6F" localFKIndex="908161AF-68D5-58B6-EF7C-13BA384EC324" name="fk_group_semester">
+<sourceDDLFile>01_ddl.sql</sourceDDLFile>
+<createdBy>Fa1097la</createdBy>
+<createdTime>2026-11-19 03:50:04 UTC</createdTime>
+<ownerDesignName>PensamientoComputacional</ownerDesignName>
+<importedID>90119946-4C4F-01AD-70DF-C52CFECC9E25</importedID>
+<referredTableLongName>semester</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>5DC4C614-6FD6-7183-50C8-BB90A9A40850</referredTableID>
+<keyObject>F13F04C7-CA3B-A904-124B-17C320122612</keyObject>
+<referredKeyID>F13F04C7-CA3B-A904-124B-17C320122612</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
