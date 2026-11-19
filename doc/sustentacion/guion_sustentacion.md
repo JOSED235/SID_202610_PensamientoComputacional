@@ -20,6 +20,50 @@ Presentación: [`Sustentacion_SID_PensamientoComputacional.pptx`](Sustentacion_S
 | Mostrar el MER y el MR completos, explicando solo lo relevante | Diapositivas 4 y 6, a pantalla completa. Tener abiertos los PDF de [`model/`](../../model/) para hacer zoom |
 | No recorrer tabla por tabla ni leer los scripts | La presentación usa ejemplos, no listados |
 
+## Ajustes finales a la presentación y su justificación
+
+Antes de la sustentación se revisó la presentación contra la guía. Cada ajuste se hizo por una razón concreta, que se explica abajo. Todas las cifras de las diapositivas se verificaron contra los scripts: 16 PK, 20 FK, 13 UNIQUE, 9 CHECK, 1 índice único funcional y 10 índices en `src/01_ddl.sql`, 249 `INSERT` en `src/02_dml.sql` y `RESUMEN DE PRUEBAS: 20 APROBADAS, 0 FALLIDAS` en `doc/evidencias/logs/05_pruebas_plsql.log`.
+
+| Diapositiva | Ajuste | Justificación |
+|---|---|---|
+| 3 | Se agregó la etiqueta "Caso original" | La guía de entregas pide declarar si el caso es original o adaptado. Antes solo estaba en las notas del orador; ahora se ve en pantalla y coincide con [`../caso_estudio.md`](../caso_estudio.md). |
+| 4 | MER centrado, línea de notación y fuente del diagrama | La notación (`#`, `*`, `o`, pata de gallo, línea punteada) permite leer el diagrama sin explicarla de memoria. La fuente aclara que el diagrama viene del modelo de Data Modeler (ver la decisión 2). |
+| 6 | Imagen del MR ajustada y fuente del diagrama | Igual que en la 4: se indica que es el mismo modelo relacional de Data Modeler. |
+| 8 | Nueva viñeta sobre `SCORE.professor_id` | Era la pregunta más probable sobre la 3FN, porque se parece al caso de `group_id` que se eliminó. Ahora la presentación la responde antes de que la hagan (ver la decisión 1). |
+| 11 | El SQL del podium es el de `src/03_dql.sql` | Antes era una versión simplificada (sin `student` ni `st.id`). La guía pide mostrar el SQL y los resultados reales; si el docente compara con el script, debe coincidir. Solo cambian los saltos de línea. |
+| 12 | Código real de R5 y dos gráficas separadas | El fragmento anterior tenía `...` y no era SQL ejecutable; ahora se muestra la CTE `por_estudiante` tal como está en el script. La gráfica anterior ponía puntos y porcentajes en el mismo eje, lo que hacía comparar magnitudes que no se pueden comparar; ahora cada métrica tiene su gráfica. |
+| 13 | Firma de cada objeto PL/SQL y nombres en colores de la paleta | La guía pide decir qué operaciones realiza cada objeto. Las firmas muestran los parámetros reales (`p_student_id`, `p_activity_exercise_id`, `p_professor_id`, `p_points`, `p_redemption_code`) y la estructura del trigger compuesto (`AFTER EACH ROW` y `AFTER STATEMENT`). Además se quitó un `·` suelto. |
+| 15 | Una sola decisión técnica validada | La guía pide "una decisión técnica que tuvieron que validar". Se dejó la del CHECK de LEVEL_RANK (ORA-02438), que tiene evidencia medible: 43 sentencias del DDL y 175 del DML fallaban en cascada. La de `SCORE.group_id` queda en las notas como respuesta de respaldo. |
+
+## Decisiones de diseño que se mantienen y cómo defenderlas
+
+### 1. `SCORE.professor_id` se mantiene
+
+**Duda:** `sp_asignar_puntos` exige que el profesor que califica sea el responsable de la actividad (-20004). Entonces, ¿no es `id → activity_exercise_id → activity_id → professor_id` una dependencia transitiva, igual que la de `group_id`?
+
+**Respuesta:** No, porque la igualdad solo se exige *al insertar*. `ACTIVITY.professor_id` se puede cambiar después; por ejemplo, si un profesor deja el curso y la actividad se reasigna a otro. El puntaje debe seguir diciendo quién lo asignó, así que en los datos guardados `activity_exercise_id` no determina `professor_id`. Es un hecho histórico del puntaje, como el precio en una línea de factura: coincide con el del producto al facturar, pero no se recalcula si el precio cambia.
+
+**Diferencia con `group_id`:** el grupo de un puntaje *nunca* puede ser distinto del grupo de su actividad, porque un puntaje en otro grupo sería un dato incorrecto. En cambio, quién calificó sí puede dejar de coincidir con el responsable actual de la actividad sin que el dato esté mal. Por eso `group_id` se eliminó y `professor_id` se mantiene.
+
+**Alternativa evaluada:** eliminar la columna y obtener el profesor por la actividad. Se descartó porque una reasignación cambiaría en silencio quién aparece como calificador de puntajes ya dados, y se perdería la trazabilidad que pide la HU-17. Además obligaría a cambiar el DDL, los 81 puntajes del DML, el procedimiento y los dos modelos, e invalidaría los logs de ejecución que se presentan como evidencia.
+
+### 2. Diagramas redibujados en lugar de las imágenes de Data Modeler
+
+**Decisión:** las diapositivas 4 y 6 muestran los diagramas de `model/mer/MER_conceptual.pdf` y `model/mr/MR_3FN.pdf`, generados con Graphviz (`model/generar_diagramas.py`). Los de Data Modeler (`model/datamodeler/MER_datamodeler.pdf` y `MR_datamodeler.pdf`) se ven pequeños en el proyector y tienen cruces de líneas que dificultan explicarlos.
+
+**Por qué es válido:** la guía exige el modelo hecho en Data Modeler en la carpeta `model`, y está completo: el `.dmd`, la carpeta del diseño, el `.zip` y los PDF. La presentación solo usa una versión más legible del mismo modelo. Se verificó que coinciden:
+
+- Modelo lógico de Data Modeler: 16 entidades y 20 relaciones. Los tres subtipos de usuario están como relaciones 1:1 identificadoras, que el diagrama dibuja con línea punteada ("es un").
+- Modelo relacional de Data Modeler: las mismas 16 tablas, con las mismas columnas, y 20 llaves foráneas, igual que el DDL.
+
+Las diapositivas lo dicen en una nota al pie. Si el docente pide ver la herramienta, se abre `model/datamodeler/PensamientoComputacional.dmd`.
+
+### 3. HU-09: un perfil objetivo por ejercicio
+
+**Duda:** la HU-09 dice que un ejercicio se puede asociar a "uno o varios perfiles", pero `EXERCISE.level_id` es una sola FK.
+
+**Respuesta:** fue una decisión de alcance documentada en [`../modelo_relacional.md`](../modelo_relacional.md#decisiones-de-diseño-y-alcance) (decisión 7) y en la matriz de trazabilidad de [`../historias_usuario.md`](../historias_usuario.md). Cada ejercicio tiene un perfil objetivo y la dificultad de 0 a 10 ya gradúa los ejercicios dentro de ese perfil; los datos de prueba y los reportes se construyeron así. Si se necesitaran varios perfiles, se agregaría una tabla asociativa `EXERCISE_LEVEL (exercise_id, level_id)` con PK compuesta y se quitaría `EXERCISE.level_id`. El resto del modelo no cambia, porque ninguna otra tabla ni consulta depende de esa columna.
+
 ## Reparto sugerido
 
 | Sección | Expositor | Tiempo |
@@ -67,7 +111,13 @@ SCORE tenía `group_id`, que dependía de `activity_exercise_id` a través de la
 No: ningún otro atributo de STUDENT lo determina. Es un dato derivado de los puntos que se almacena para mostrarlo en el perfil (HU-15). La redundancia está controlada: el trigger compuesto lo recalcula ante cualquier cambio en SCORE.
 
 **¿Por qué SCORE.professor_id no es redundante con ACTIVITY.professor_id?**
-Porque representa quién asignó el puntaje, que es un hecho del puntaje. `sp_asignar_puntos` valida que coincida con el responsable de la actividad.
+Porque es un hecho histórico del puntaje: quién lo asignó en ese momento. `sp_asignar_puntos` exige que al insertar sea el responsable de la actividad, pero `ACTIVITY.professor_id` puede cambiar después si la actividad se reasigna, y el puntaje debe conservar quién lo dio. Por eso `activity_exercise_id` no lo determina. Ver la decisión 1 de este guion.
+
+**¿Por qué EXERCISE tiene un solo perfil si la HU-09 permite varios?**
+Fue una decisión de alcance: cada ejercicio tiene un perfil objetivo y la dificultad de 0 a 10 lo gradúa. Si se necesitaran varios, se agrega `EXERCISE_LEVEL (exercise_id, level_id)` sin tocar el resto del modelo. Ver la decisión 3 de este guion.
+
+**¿Por qué el diagrama no es la imagen de Data Modeler?**
+Es el mismo modelo redibujado para que se lea en el proyector: 16 entidades, 20 relaciones y 20 FK, verificados contra el `.dmd`. El modelo en Data Modeler está completo en `model/datamodeler/`. Ver la decisión 2 de este guion.
 
 ### SQL
 
@@ -120,7 +170,7 @@ El trigger guarda tanto el estudiante nuevo como el anterior y recalcula la cate
 ### IAG
 
 **¿Qué decisión técnica tuvieron que validar?**
-El CHECK de columna de LEVEL_RANK (ORA-02438) y la columna `SCORE.group_id`, que se eliminó por romper la 3FN. Ver [`../Riesgos_uso_IAg.md`](../Riesgos_uso_IAg.md#4-decisiones-técnicas-que-tuvimos-que-validar).
+La que se presenta es el CHECK de LEVEL_RANK: declarado como CHECK de columna comparaba `max_points` con `min_points`, pasó en otro motor y en Oracle dio ORA-02438; en cascada fallaban 43 sentencias del DDL y 175 del DML. Se corrigió como restricción de tabla y se volvió a ejecutar todo. Si piden otra: la columna `SCORE.group_id`, que se eliminó por romper la 3FN. Ver [`../Riesgos_uso_IAg.md`](../Riesgos_uso_IAg.md#4-decisiones-técnicas-que-tuvimos-que-validar).
 
 **¿Qué riesgos ven en un contexto profesional?**
 Código que parece correcto pero no corre en el motor real, errores lógicos silenciosos, exposición de datos personales (Ley 1581 de 2012) y perder el criterio para mantener y sustentar el código.

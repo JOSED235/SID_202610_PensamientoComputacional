@@ -36,6 +36,16 @@ Reglas que se aplicaron en todos los usos:
 | 7 | "Deja todo completamente listo para entregar, revisa los modelos que pusiste en las diapositivas que se ven exageradamente desordenados y poco legibles" | Rehízo los diagramas con disposición fija por módulos y líneas ortogonales, y preparó versiones para las diapositivas con letra más grande | El equipo revisó la legibilidad en la presentación |
 | 8 | "Ahí te dejé abierto el Data Modeler para que puedas hacer directamente todo desde ahí y queden mejor los modelos" | Operó Data Modeler: importó el DDL, generó el modelo lógico, reubicó tablas y entidades por módulos sin que ninguna línea atraviese una caja, y exportó los PDF y el zip del diseño | El equipo abrió el `.dmd` y revisó los PDF |
 
+## Revisión final de la sustentación (2026-11-19)
+
+**Herramienta:** Claude Code.
+
+| # | Prompt (textual) | Respuesta de la herramienta | Validación y cambios del equipo |
+|---|---|---|---|
+| 9 | "Revisa en la presentación cómo podríamos mejorarla, que esté todo lo que pide la rúbrica, que esté todo más limpio, completo, detallado" | Comparó las 16 diapositivas con la guía de sustentación. Confirmó que cubren las 7 secciones y señaló: SQL simplificado o con `...` en R2 y R5, una gráfica que mezclaba puntos y porcentajes en el mismo eje, la justificación contradictoria de `SCORE.professor_id`, el uso de diagramas que no son de Data Modeler y la diferencia de la HU-09 con `EXERCISE.level_id` | El equipo decidió mantener los diagramas redibujados porque se leen mejor en el proyector |
+| 10 | "Aplica los cambios que puedas en el pptx" | Puso el SQL real de `src/03_dql.sql` en R2 y R5, separó la gráfica de métricas en dos, agregó la etiqueta de caso original, la notación del MER, las firmas de los objetos PL/SQL y dejó una sola decisión validada en la diapositiva de IAG | El equipo revisó las diapositivas renderizadas |
+| 11 | "Corrige las cosas que consideres más importantes pero que realmente estén justificadas y me lo pongas en el archivo de guion para cada uno" | Verificó contra los scripts las cifras de la presentación (16 PK, 20 FK, 13 UNIQUE, 9 CHECK, 249 filas) y comparó el `.dmd` con los diagramas (16 entidades, 20 relaciones, 20 FK). Corrigió la justificación de `SCORE.professor_id` como dato histórico, agregó la nota de fuente a los diagramas y documentó cada ajuste y decisión en el guion | El equipo aceptó mantener `SCORE.professor_id` sin cambiar el esquema, porque cambiarlo invalidaría los logs de ejecución en Oracle |
+
 ## Lecciones
 
 - La herramienta no detectó el error ORA-02438 mientras no se ejecutó en Oracle real; la validación en el motor fue indispensable.
