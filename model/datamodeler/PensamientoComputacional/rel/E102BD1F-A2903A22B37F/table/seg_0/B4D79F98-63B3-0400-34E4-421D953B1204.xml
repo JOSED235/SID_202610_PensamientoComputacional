@@ -1,11 +1,12 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B4D79F98-63B3-0400-34E4-421D953B1204" name="enrollment">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B4D79F98-63B3-0400-34E4-421D953B1204" name="ENROLLMENTS">
 <sourceDDLFile>01_ddl.sql</sourceDDLFile>
 <createdBy>Fa1097la</createdBy>
 <createdTime>2026-11-19 03:50:04 UTC</createdTime>
 <commentInRDBMS><![CDATA[Registro de matricula de un estudiante en un grupo de clase]]></commentInRDBMS>
 <ownerDesignName>PensamientoComputacional</ownerDesignName>
 <importedID>6D1E8F40-0315-AC9F-3E72-AF4CFA64A2A6</importedID>
+<ordsAlias>enrollment</ordsAlias>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
