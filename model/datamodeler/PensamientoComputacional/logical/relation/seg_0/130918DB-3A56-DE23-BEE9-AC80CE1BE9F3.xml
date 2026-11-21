@@ -9,6 +9,8 @@
 </engineerTo>
 <sourcePk>E7EE3CF7-27DE-D56B-9699-D59FE219D4F0</sourcePk>
 <identifying>false</identifying>
+<nameOnSource>belong to</nameOnSource>
+<nameOnTarget>has</nameOnTarget>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>

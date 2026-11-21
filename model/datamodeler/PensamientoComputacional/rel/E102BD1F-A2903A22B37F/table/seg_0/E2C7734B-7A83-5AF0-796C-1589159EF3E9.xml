@@ -1,11 +1,12 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E2C7734B-7A83-5AF0-796C-1589159EF3E9" name="activity_exercise">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E2C7734B-7A83-5AF0-796C-1589159EF3E9" name="ACTIVITY_EXERCISES">
 <sourceDDLFile>01_ddl.sql</sourceDDLFile>
 <createdBy>Fa1097la</createdBy>
 <createdTime>2026-11-19 03:50:04 UTC</createdTime>
 <commentInRDBMS><![CDATA[Asociacion de ejercicios a una actividad especifica con su orden de aparicion]]></commentInRDBMS>
 <ownerDesignName>PensamientoComputacional</ownerDesignName>
 <importedID>4CEE21BA-B891-BA71-983D-46383F9A8D42</importedID>
+<ordsAlias>activity_exercise</ordsAlias>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>

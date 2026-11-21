@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BEF72485-2750-A2CB-6A73-DDA58F84391E" name="user_status">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BEF72485-2750-A2CB-6A73-DDA58F84391E" name="USER_STATUS">
 <sourceDDLFile>01_ddl.sql</sourceDDLFile>
 <createdBy>Fa1097la</createdBy>
 <createdTime>2026-11-19 03:50:04 UTC</createdTime>

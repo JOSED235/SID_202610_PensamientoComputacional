@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FAF217B6-79F3-4FB1-07D3-8775BFB80256" name="exercise">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FAF217B6-79F3-4FB1-07D3-8775BFB80256" name="EXERCISE">
 <createdBy>Fa1097la</createdBy>
 <createdTime>2026-11-19 03:55:17 UTC</createdTime>
 <commentInRDBMS><![CDATA[Banco de ejercicios de programacion]]></commentInRDBMS>
@@ -60,11 +60,10 @@
 <domain>B12EE036-121A-C666-7EEA-F271D2EE99BD</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="level id" id="DCA62445-0F9B-AED9-3D9E-8DF1B478481D">
-<createdBy>Fa1097la</createdBy>
-<createdTime>2026-11-19 03:55:17 UTC</createdTime>
-<commentInRDBMS><![CDATA[FK al perfil/categoria objetivo (Principiante, Killer, Pro)]]></commentInRDBMS>
-<generatorID>F04B3481-9891-8613-EAE6-04C0C01F0909</generatorID>
+<Attribute name="id1" id="186345A6-B344-8BC1-0541-FDCA029F9C7A">
+<createdBy>David</createdBy>
+<createdTime>2026-11-21 17:11:19 UTC</createdTime>
+<generatorID>0D6145C0-5F8F-D5B1-A786-AB94565F4FE1</generatorID>
 <ownerDesignName>PensamientoComputacional</ownerDesignName>
 <engineerTo>
 <item key="E102BD1F-4F6C-F12D-7567-A2903A22B37F" value="true"/>

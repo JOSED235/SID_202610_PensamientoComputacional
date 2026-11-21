@@ -1,11 +1,12 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="375C7D54-C381-7955-A87F-FFAF790EE487" name="user_type">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="375C7D54-C381-7955-A87F-FFAF790EE487" name="USER_TYPES">
 <sourceDDLFile>01_ddl.sql</sourceDDLFile>
 <createdBy>Fa1097la</createdBy>
 <createdTime>2026-11-19 03:50:04 UTC</createdTime>
 <commentInRDBMS><![CDATA[Catalogo de tipos de usuario del sistema (ESTUDIANTE, PROFESOR, ADMINISTRADOR)]]></commentInRDBMS>
 <ownerDesignName>PensamientoComputacional</ownerDesignName>
 <importedID>97428A0F-83D3-3592-F1EE-DCFD2F7DED50</importedID>
+<ordsAlias>user_type</ordsAlias>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>

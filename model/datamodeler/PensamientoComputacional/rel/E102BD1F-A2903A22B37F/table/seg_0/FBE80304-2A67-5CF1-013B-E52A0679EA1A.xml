@@ -1,11 +1,12 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FBE80304-2A67-5CF1-013B-E52A0679EA1A" name="difficulty_scale">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FBE80304-2A67-5CF1-013B-E52A0679EA1A" name="DIFFICULTY_SCALES">
 <sourceDDLFile>01_ddl.sql</sourceDDLFile>
 <createdBy>Fa1097la</createdBy>
 <createdTime>2026-11-19 03:50:04 UTC</createdTime>
 <commentInRDBMS><![CDATA[Escala discreta de dificultad para ejercicios (valores de 0 a 10)]]></commentInRDBMS>
 <ownerDesignName>PensamientoComputacional</ownerDesignName>
 <importedID>05A2CB05-C97A-CA96-6CC6-70F09FEA50AE</importedID>
+<ordsAlias>difficulty_scale</ordsAlias>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>

@@ -1,11 +1,12 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C36CCB11-FB24-ECC0-6289-7D7FDAD77C6F" name="course_group">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C36CCB11-FB24-ECC0-6289-7D7FDAD77C6F" name="COURCE_GROUPS">
 <sourceDDLFile>01_ddl.sql</sourceDDLFile>
 <createdBy>Fa1097la</createdBy>
 <createdTime>2026-11-19 03:50:04 UTC</createdTime>
 <commentInRDBMS><![CDATA[Grupos de clase del curso ofertados por semestre]]></commentInRDBMS>
 <ownerDesignName>PensamientoComputacional</ownerDesignName>
 <importedID>5A5716C6-52C3-FF59-2820-7910FD4FBD06</importedID>
+<ordsAlias>course_group</ordsAlias>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>

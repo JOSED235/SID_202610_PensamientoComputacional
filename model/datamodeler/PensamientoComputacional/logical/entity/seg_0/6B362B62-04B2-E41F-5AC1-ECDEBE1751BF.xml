@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6B362B62-04B2-E41F-5AC1-ECDEBE1751BF" name="score">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6B362B62-04B2-E41F-5AC1-ECDEBE1751BF" name="SCORE">
 <createdBy>Fa1097la</createdBy>
 <createdTime>2026-11-19 03:55:17 UTC</createdTime>
 <commentInRDBMS><![CDATA[Registro de puntos otorgados a un estudiante por la resolucion de un ejercicio]]></commentInRDBMS>

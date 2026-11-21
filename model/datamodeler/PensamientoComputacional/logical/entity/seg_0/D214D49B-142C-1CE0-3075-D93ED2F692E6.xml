@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D214D49B-142C-1CE0-3075-D93ED2F692E6" name="professor">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D214D49B-142C-1CE0-3075-D93ED2F692E6" name="PROFESSOR">
 <createdBy>Fa1097la</createdBy>
 <createdTime>2026-11-19 03:55:17 UTC</createdTime>
 <commentInRDBMS><![CDATA[Subtipo de usuario con rol Profesor del curso]]></commentInRDBMS>
