@@ -12,7 +12,7 @@ Repositorio: https://github.com/JOSED235/SID_202610_PensamientoComputacional
 |---|---|---|---|
 | Jose David Rodriguez Pinilla | A00407151 | [JOSED235](https://github.com/JOSED235) | Líder de proyecto |
 | Jose David Valdez | A00408018 | [K0R0Zz](https://github.com/K0R0Zz) | Modelado de datos |
-| Santiago Vinazco Ortegon | A00410366 | [Svinazco100](https://github.com/Svinazco100) | Desarrollo de base de datos |
+| Santiago Vinazco Ortegon | A00410365 | [Svinazco100](https://github.com/Svinazco100) | Desarrollo de base de datos |
 | Carlos Pasinga | A00412446 | [Sayan007-c](https://github.com/Sayan007-c) | Documentación y calidad |
 
 ## Estructura del repositorio
